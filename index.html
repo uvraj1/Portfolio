@@ -150,15 +150,15 @@
    </div>
   </header>
   <!-- Hero Section -->
-  <section class="min-h-[90vh] sm:min-h-screen flex flex-col justify-center relative overflow-hidden pt-4 sm:pt-20 pb-0 sm:pb-10" id="about">
+  <section class="min-h-[90vh] md:min-h-[600px] xl:min-h-screen flex flex-col justify-center relative overflow-hidden pt-4 sm:pt-20 pb-0 sm:pb-10" id="about">
    <div class="bg-blob bg-blob-cyan w-64 h-64 sm:w-96 sm:h-96 top-10 left-10 sm:left-10"></div>
    <div class="bg-blob bg-blob-indigo w-64 h-64 sm:w-96 sm:h-96 bottom-10 right-10 sm:right-20"></div>
    
-   <!-- 2-Column Separated Layout: Koi overlap nahi hoga -->
-   <div class="container mx-auto px-4 sm:px-6 flex flex-row items-center justify-between relative z-10 reveal min-h-[80vh]">
+   <!-- 2-Column Separated Layout -->
+   <div class="container mx-auto px-4 sm:px-6 flex flex-row items-center justify-between relative z-10 reveal">
 
-     <!-- Left Column: Text & Buttons -->
-     <div class="w-full sm:w-[65%] lg:w-1/2 flex flex-col justify-center text-left order-1 z-20 relative pt-2 sm:pt-0 pb-10 sm:pb-0">
+     <!-- Left Column -->
+     <div class="w-full sm:w-[55%] md:w-1/2 flex flex-col justify-center text-left order-1 z-20 relative pt-8 sm:pt-0 pb-10 sm:pb-0">
       
       <!-- Text Content without Box -->
       <div class="w-full relative">
@@ -212,9 +212,9 @@
       </div>
      </div>
 
-     <!-- Right Column: Tall Image (Apni jagah pe stable rahegi) -->
-     <div class="absolute sm:relative right-[-15%] sm:right-0 bottom-0 w-[90%] sm:w-[35%] lg:w-1/2 h-[80vh] sm:h-[55vh] md:h-[65vh] lg:h-[65vh] flex justify-end items-end order-2 z-0 pointer-events-none opacity-30 sm:opacity-100">
-       <img src="itsme.png" alt="Youbaraj Nama" class="w-auto h-full scale-[1.4] sm:scale-[1.15] lg:scale-[1.3] transform translate-x-0 sm:translate-x-8 lg:translate-x-[25%] origin-bottom object-contain object-bottom grayscale opacity-100 sm:opacity-85 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);" />
+     <!-- Right Column -->
+     <div class="absolute sm:relative right-[-15%] sm:right-0 bottom-0 w-[90%] sm:w-[45%] md:w-1/2 h-[80vh] sm:h-[450px] md:h-[550px] lg:h-[650px] xl:h-[75vh] flex justify-end items-end order-2 z-0 pointer-events-none opacity-30 sm:opacity-100">
+       <img src="itsme.png" alt="Youbaraj Nama" class="w-auto h-full scale-[1.4] sm:scale-[1.1] md:scale-[1.15] lg:scale-[1.25] transform translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-[20%] origin-bottom object-contain object-bottom grayscale opacity-100 sm:opacity-85 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);" />
      </div>
 
    </div>
@@ -223,7 +223,7 @@
 
   <!-- Skills Section -->
 
-<section class="bg-gray-800 min-h-screen flex flex-col justify-center py-12 sm:py-20 relative overflow-hidden" id="skills">
+<section class="bg-gray-800 flex flex-col justify-center py-16 sm:py-24 relative overflow-hidden" id="skills">
    <div class="bg-blob bg-blob-cyan w-56 h-56 sm:w-80 sm:h-80 top-10 sm:top-20 right-10 sm:right-20"></div>
    <div class="container mx-auto px-6 relative z-10">
     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 mb-10 sm:mb-16 text-center reveal tracking-tight">
@@ -292,7 +292,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section class="min-h-screen flex flex-col justify-center relative overflow-hidden py-12 sm:py-20 border-t border-gray-800/50" id="projects">
+  <section class="flex flex-col justify-center relative overflow-hidden py-16 sm:py-24 border-t border-gray-800/50" id="projects">
    <div class="bg-blob bg-blob-indigo w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] top-1/4 -left-24 sm:-left-48"></div>
    <div class="bg-blob bg-blob-cyan w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] bottom-1/4 -right-24 sm:-right-48"></div>
    <div class="container mx-auto px-6 max-w-7xl relative z-10">
@@ -464,7 +464,7 @@
 
 
   <!-- Contact Section -->
-  <section class="bg-gradient-to-b from-gray-800 to-gray-900 min-h-screen flex flex-col justify-center py-12 sm:py-20 relative overflow-hidden" id="contact">
+  <section class="bg-gradient-to-b from-gray-800 to-gray-900 flex flex-col justify-center py-16 sm:py-24 relative overflow-hidden" id="contact">
    <div class="bg-blob bg-blob-cyan w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] top-10 sm:top-20 left-1/2 transform -translate-x-1/2"></div>
    <div class="container mx-auto px-6 max-w-3xl relative z-10 reveal">
     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 mb-8 sm:mb-12 text-center tracking-tight">
