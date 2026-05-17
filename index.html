@@ -150,15 +150,15 @@
    </div>
   </header>
   <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20 pb-10" id="about">
+  <section class="min-h-[90vh] sm:min-h-screen flex flex-col justify-center relative overflow-hidden pt-4 sm:pt-20 pb-0 sm:pb-10" id="about">
    <div class="bg-blob bg-blob-cyan w-64 h-64 sm:w-96 sm:h-96 top-10 left-10 sm:left-10"></div>
    <div class="bg-blob bg-blob-indigo w-64 h-64 sm:w-96 sm:h-96 bottom-10 right-10 sm:right-20"></div>
    
    <!-- 2-Column Separated Layout: Koi overlap nahi hoga -->
-   <div class="container mx-auto px-4 sm:px-6 flex flex-row items-center justify-between relative z-10 reveal min-h-[75vh] sm:min-h-[80vh]">
+   <div class="container mx-auto px-4 sm:px-6 flex flex-row items-center justify-between relative z-10 reveal min-h-[80vh]">
 
      <!-- Left Column: Text & Buttons -->
-     <div class="w-[65%] lg:w-1/2 flex flex-col justify-center text-left order-1 z-20">
+     <div class="w-full sm:w-[65%] lg:w-1/2 flex flex-col justify-center text-left order-1 z-20 relative pt-2 sm:pt-0 pb-10 sm:pb-0">
       
       <!-- Text Content without Box -->
       <div class="w-full relative">
@@ -213,8 +213,8 @@
      </div>
 
      <!-- Right Column: Tall Image (Apni jagah pe stable rahegi) -->
-     <div class="w-[35%] lg:w-1/2 h-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[65vh] flex flex-col items-center justify-end items-end relative order-2 z-10 pointer-events-none mt-0">
-       <img src="itsme.png" alt="Youbaraj Nama" class="w-auto h-full scale-125 sm:scale-[1.15] lg:scale-[1.3] transform -translate-x-2 sm:translate-x-8 lg:translate-x-[25%] origin-bottom object-contain object-bottom grayscale opacity-85 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);" />
+     <div class="absolute sm:relative right-[-15%] sm:right-0 bottom-0 w-[90%] sm:w-[35%] lg:w-1/2 h-[80vh] sm:h-[55vh] md:h-[65vh] lg:h-[65vh] flex justify-end items-end order-2 z-0 pointer-events-none opacity-30 sm:opacity-100">
+       <img src="itsme.png" alt="Youbaraj Nama" class="w-auto h-full scale-[1.4] sm:scale-[1.15] lg:scale-[1.3] transform translate-x-0 sm:translate-x-8 lg:translate-x-[25%] origin-bottom object-contain object-bottom grayscale opacity-100 sm:opacity-85 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);" />
      </div>
 
    </div>
