@@ -87,6 +87,154 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Advanced Dual-Marquee Animation */
+    @keyframes scrollLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @keyframes scrollRight {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    .marquee-track-left {
+      display: flex;
+      width: max-content;
+      animation: scrollLeft 45s linear infinite;
+      will-change: transform;
+    }
+    .marquee-track-right {
+      display: flex;
+      width: max-content;
+      animation: scrollRight 40s linear infinite;
+      will-change: transform;
+    }
+    
+    /* Pause both rows when hovering over the container */
+    .marquee-container:hover .marquee-track-left,
+    .marquee-container:hover .marquee-track-right {
+      animation-play-state: paused;
+    }
+
+    /* 3D Tilt perspective container */
+    .perspective-container {
+      perspective: 1200px;
+    }
+    .cert-3d-card {
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      transform-style: preserve-3d;
+    }
+    .cert-3d-card:hover {
+      transform: scale(1.05) translateZ(30px);
+      box-shadow: 0 25px 50px -12px rgba(34, 211, 238, 0.4);
+      z-index: 50;
+    }
+
+    /* UI/UX Slides */
+    .uiux-slides-track {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 16px;
+    }
+    .uiux-slides-track::-webkit-scrollbar { display: none; }
+    .uiux-slide {
+      scroll-snap-align: start;
+      flex: 0 0 340px;
+      height: 460px;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.4s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.4s ease;
+    }
+    @media (min-width: 640px) {
+      .uiux-slide { flex: 0 0 420px; height: 540px; }
+    }
+    .uiux-slide:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(34,211,238,0.15);
+    }
+    .uiux-slide img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .uiux-slide:hover img { transform: scale(1.08); }
+    .uiux-slide-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(3,7,18,0.97) 0%, rgba(3,7,18,0.5) 45%, rgba(3,7,18,0.05) 100%);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 28px 24px;
+      transition: background 0.4s ease;
+    }
+    .uiux-slide:hover .uiux-slide-overlay {
+      background: linear-gradient(to top, rgba(3,7,18,0.99) 0%, rgba(3,7,18,0.7) 55%, rgba(3,7,18,0.1) 100%);
+    }
+    .uiux-slide-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 999px;
+      background: rgba(34,211,238,0.12); border: 1px solid rgba(34,211,238,0.3);
+      color: #22d3ee; margin-bottom: 10px; width: fit-content;
+    }
+    .uiux-slide-title {
+      font-size: 1.35rem; font-weight: 800; color: #fff;
+      line-height: 1.25; margin-bottom: 8px;
+    }
+    @media (min-width: 640px) { .uiux-slide-title { font-size: 1.55rem; } }
+    .uiux-slide-desc {
+      font-size: 13px; color: rgba(156,163,175,1);
+      line-height: 1.55; margin-bottom: 16px;
+      opacity: 0; transform: translateY(10px);
+      transition: all 0.35s ease 0.05s;
+    }
+    .uiux-slide:hover .uiux-slide-desc { opacity: 1; transform: translateY(0); }
+    .uiux-slide-tools {
+      display: flex; flex-wrap: wrap; gap: 7px;
+      opacity: 0; transform: translateY(8px);
+      transition: all 0.35s ease 0.1s;
+    }
+    .uiux-slide:hover .uiux-slide-tools { opacity: 1; transform: translateY(0); }
+    .uiux-tool-chip {
+      font-size: 11px; font-weight: 600; padding: 4px 12px;
+      border-radius: 999px; background: rgba(99,102,241,0.15);
+      border: 1px solid rgba(99,102,241,0.3); color: #a5b4fc;
+    }
+    .uiux-slide-btn {
+      margin-top: 14px; display: inline-flex; align-items: center; gap-8: 6px;
+      font-size: 13px; font-weight: 700; color: #22d3ee;
+      opacity: 0; transform: translateY(8px);
+      transition: all 0.35s ease 0.15s;
+      text-decoration: none;
+    }
+    .uiux-slide:hover .uiux-slide-btn { opacity: 1; transform: translateY(0); }
+    .uiux-slide-number {
+      position: absolute; top: 20px; right: 20px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35);
+    }
+    /* Scroll buttons */
+    .uiux-scroll-btn {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(17,24,39,0.8); border: 1px solid rgba(55,65,81,0.7);
+      backdrop-filter: blur(8px); cursor: pointer; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: #9ca3af; transition: all 0.25s ease;
+    }
+    .uiux-scroll-btn:hover { border-color: rgba(34,211,238,0.5); color: #22d3ee; background: rgba(34,211,238,0.08); }
+    /* Empty Slide add button */
+    .uiux-add-slide {
+      flex: 0 0 340px; height: 460px;
+      border-radius: 20px; border: 2px dashed rgba(55,65,81,0.6);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 12px; color: rgba(75,85,99,1); cursor: default;
+      scroll-snap-align: start;
+    }
+    @media (min-width: 640px) { .uiux-add-slide { flex: 0 0 420px; height: 540px; } }
   </style>
  </head>
  <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col overflow-x-hidden">
@@ -406,11 +554,71 @@
    </h2>
    <!-- Filter Buttons -->
    <div class="reveal flex justify-center flex-wrap gap-2 sm:gap-4 mb-8 sm:mb-12">
-    <button class="filter-btn bg-cyan-600 text-white px-5 py-2 sm:px-8 sm:py-3 text-sm sm:text-base rounded-full font-semibold transition shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(34,211,238,0.6)]" data-filter="all">All Projects</button>
-    <button class="filter-btn bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-1.5 sm:px-6 sm:py-2 text-sm sm:text-base rounded-full font-semibold transition" data-filter="ai">AI Projects</button>
-    <button class="filter-btn bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-1.5 sm:px-6 sm:py-2 text-sm sm:text-base rounded-full font-semibold transition" data-filter="ui-ux">UI/UX Projects</button>
+    <button class="filter-btn bg-cyan-600 text-white px-5 py-2 sm:px-8 sm:py-3 text-sm sm:text-base rounded-full font-semibold transition shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(34,211,238,0.6)]" data-filter="ai">AI Projects</button>
+    <button class="filter-btn bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-1.5 sm:px-6 sm:py-2 text-sm sm:text-base rounded-full font-semibold transition" data-filter="ui-ux">UI/UX Design</button>
    </div>
+
+   <!-- ═══════════════════════════════════════════════════════
+        UI/UX DESIGN SHOWCASE — Horizontal Slides
+   ═══════════════════════════════════════════════════════ -->
+   <div id="uiux-section" class="reveal mb-16" style="display: none;">
+     <!-- Section header -->
+     <div class="flex items-center justify-between mb-6">
+       <div class="flex items-center gap-3">
+         <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/25 flex items-center justify-center">
+           <i class="fas fa-pen-nib text-cyan-400 text-sm"></i>
+         </div>
+         <h3 class="text-lg sm:text-xl font-bold text-white">UI/UX Design <span class="text-cyan-400">Showcase</span></h3>
+         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400" id="uiux-count">0 Projects</span>
+       </div>
+       <!-- Scroll arrows -->
+       <div class="flex gap-2">
+         <button class="uiux-scroll-btn" id="uiux-prev" aria-label="Scroll left"><i class="fas fa-arrow-left text-sm"></i></button>
+         <button class="uiux-scroll-btn" id="uiux-next" aria-label="Scroll right"><i class="fas fa-arrow-right text-sm"></i></button>
+       </div>
+     </div>
+
+     <!-- Slides track -->
+     <div class="uiux-slides-track" id="uiux-track">
+
+       <!-- ─── UI/UX Project: Job India ─── -->
+
+       <!-- Job Search App UI -->
+       <div class="uiux-slide" onclick="openUiuxModal('Job Search App UI', `<b>Project Overview:</b><br>Yeh interface ek comprehensive job search platform ko represent karta hai, jiska mukhya uddeshya job seekers ko unke ideal roles tak asaani se pahunchana hai. Design main focus User Experience (UX) aur Navigation par hai.<br><br><span class=\'text-cyan-400\'><b>Key UI/UX Components:</b></span><br><br><b>Dashboard (Home Screen):</b><br>• <b>Search Functionality:</b> Prominent search bar jahan users job titles ya companies ko search kar sakte hain.<br>• <b>Filters:</b> Location, sector, aur job type refine karne ki suvidha.<br>• <b>Categories:</b> Popular Careers & Hiring Giants ke cards.<br><br><b>Navigation Bar:</b><br>Bottom navigation bar (Jobs, Saved, Pro, Applied, Profile) for quick access.<br><br><b>Profile & Personalization:</b><br>• Personal info, resume, portfolio, skills, aur education management.<br>• <b>Profile Strength Indicator:</b> Gamification to encourage profile completion.<br><br><b>AI Integration:</b><br>• <b>Umma AI:</b> Built-in AI assistant to solve queries and streamline job hunt.<br><br><b>Settings & Customization:</b><br>• Language options (multi-lingual) and visual appearance (Light/Dark mode).`, ['images/image1.jpeg','images/image2.jpeg','images/image3.jpeg','images/image4.jpeg','images/image5.jpeg','images/image6.jpeg','images/image7.jpeg','images/image8.jpeg','images/image9.jpeg','images/image10.jpeg'], ['Figma', 'Mobile UI', 'UX Research', 'AI Integration'])">
+         <img src="images/image1.jpeg" alt="Job Search App UI" />
+         <div class="uiux-slide-overlay">
+           <span class="uiux-slide-tag"><i class="fas fa-mobile-alt"></i> UI/UX Design</span>
+           <div class="uiux-slide-title">Job Search App UI</div>
+           <div class="uiux-slide-desc">A comprehensive job search platform with Umma AI, advanced filters & gamified profile.</div>
+           <div class="uiux-slide-tools">
+             <span class="uiux-tool-chip">Figma</span>
+             <span class="uiux-tool-chip">Mobile UI</span>
+             <span class="uiux-tool-chip">UX Research</span>
+           </div>
+           <span class="uiux-slide-btn">View Details <i class="fas fa-arrow-right ml-2"></i></span>
+         </div>
+         <span class="uiux-slide-number">01</span>
+       </div>
+
+     </div>
+
+     <!-- Dot indicators -->
+     <div class="flex justify-center gap-2 mt-5" id="uiux-dots"></div>
+   </div>
+
+   <!-- ═══════════════════════════════════════════════════════
+        AI & DEV PROJECTS — Card Grid
+   ═══════════════════════════════════════════════════════ -->
+   <div id="ai-section">
+     <div class="flex items-center gap-3 mb-6 reveal">
+       <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/25 flex items-center justify-center">
+         <i class="fas fa-robot text-indigo-400 text-sm"></i>
+       </div>
+       <h3 class="text-lg sm:text-xl font-bold text-white">AI & Dev <span class="text-indigo-400">Projects</span></h3>
+     </div>
    <div class="grid gap-6 md:gap-12 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3" id="projects-grid">
+
+
     <!-- Project 1: LUCIFER AI VOICE ASSISTENT -->
     <article class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal" data-category="ai">
      <div class="overflow-hidden">
@@ -487,21 +695,70 @@
   </div>
  </div>
 </article>
-    <!-- Project 5 -->
-    <!-- Project 6 -->
+<!-- Project 6 -->
     <!-- Project 7 -->
     <!-- Project 8 -->
-    <!-- Project 9 -->
-    <!-- Project 10 -->
-    <!-- Project 11 -->
-    <!-- Project 12 -->
-    <!-- Project 13 -->
-    <!-- Project 14 -->
-    <!-- Project 15 -->
    </div>
+   </div><!-- /ai-section -->
    </div>
   </section>
-  <!-- Project Demo Modal -->
+
+  <!-- Certificates Section -->
+  <section class="bg-gray-900 py-20 sm:py-32 relative overflow-hidden border-t border-gray-800/50" id="certificates">
+   <!-- Animated Background Elements -->
+   <div class="bg-blob bg-blob-cyan w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] top-0 left-0 opacity-40 mix-blend-screen"></div>
+   <div class="bg-blob bg-blob-indigo w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bottom-0 right-0 opacity-40 mix-blend-screen"></div>
+   
+   <div class="container mx-auto px-6 max-w-7xl relative z-10">
+    <div class="text-center mb-16 sm:mb-24 reveal">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 tracking-tight drop-shadow-lg inline-block relative pb-4">
+       Achievements & Certificates
+       <!-- Glowing underline -->
+       <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.6)]"></div>
+      </h2>
+      <p class="mt-8 text-gray-400 max-w-2xl mx-auto text-lg sm:text-xl font-light">Showcasing my continuous learning journey and professional milestones through verified credentials.</p>
+    </div>
+    
+    <!-- Animated Dual Marquee System -->
+    <div class="marquee-container perspective-container relative w-full overflow-hidden flex flex-col gap-6 sm:gap-10 reveal">
+      <!-- Gradient Masks -->
+      <div class="absolute left-0 top-0 w-12 sm:w-32 h-full bg-gradient-to-r from-gray-900 to-transparent z-20 pointer-events-none"></div>
+      <div class="absolute right-0 top-0 w-12 sm:w-32 h-full bg-gradient-to-l from-gray-900 to-transparent z-20 pointer-events-none"></div>
+
+      <!-- Row 1: Scrolling Left -->
+      <div id="cert-track-left" class="marquee-track-left gap-6 sm:gap-10">
+        <!-- Certificates will be dynamically injected here by JavaScript -->
+      </div>
+
+      <!-- Row 2: Scrolling Right -->
+      <div id="cert-track-right" class="marquee-track-right gap-6 sm:gap-10">
+        <!-- Certificates will be dynamically injected here by JavaScript -->
+      </div>
+    </div>
+   </div>
+  </section>
+  <!-- UI/UX Project Detail Modal -->
+  <div id="uiux-modal" class="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden" role="dialog" aria-modal="true">
+    <div class="relative bg-gray-900 border border-gray-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <button onclick="closeUiuxModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center z-10 transition">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="p-6 sm:p-8">
+        <!-- Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="uiux-slide-tag" style="position:static;margin:0" id="uiux-modal-tag"><i class="fas fa-pen-nib"></i> UI/UX Design</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-2" id="uiux-modal-title"></h3>
+          <p class="text-gray-400 text-sm sm:text-base leading-relaxed" id="uiux-modal-desc"></p>
+        </div>
+        <!-- Tools -->
+        <div class="flex flex-wrap gap-2 mb-6" id="uiux-modal-tools"></div>
+        <!-- Screenshots Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="uiux-modal-screenshots"></div>
+      </div>
+    </div>
+  </div>
   <div aria-describedby="modal-description" aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex items-center justify-center p-6 z-50 hidden" id="project-modal" role="dialog">
    <div class="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
     <button aria-label="Close modal" class="absolute top-4 right-4 text-gray-400 hover:text-indigo-500 text-2xl focus:outline-none" id="modal-close">
@@ -607,7 +864,26 @@
    </div>
   </footer>
   <script>
-   const menuBtn = document.getElementById('menu-btn');
+   // --- UI/UX Modal ---
+  function openUiuxModal(title, desc, screenshots, tools) {
+    document.getElementById('uiux-modal-title').textContent = title;
+    document.getElementById('uiux-modal-desc').innerHTML = desc;
+    const toolsEl = document.getElementById('uiux-modal-tools');
+    toolsEl.innerHTML = tools.map(t => `<span class="uiux-tool-chip">${t}</span>`).join('');
+    const ssEl = document.getElementById('uiux-modal-screenshots');
+    ssEl.innerHTML = screenshots.map(src => `<img src="${src}" class="w-full rounded-xl border border-gray-800 object-cover" alt="Screenshot" />`).join('');
+    document.getElementById('uiux-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeUiuxModal() {
+    document.getElementById('uiux-modal').classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('uiux-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeUiuxModal();
+  });
+
+  const menuBtn = document.getElementById('menu-btn');
    const mobileMenu = document.getElementById('mobile-menu');
 
    if (menuBtn && mobileMenu) {
@@ -682,8 +958,22 @@
       const safeTitle = title.replace(/'/g, "\\'");
       const safeDesc = desc.replace(/'/g, "\\'");
 
-      const code = `<!-- Project: ${title} -->
-<article class="bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col project-card hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(99,102,241,0.3)] group cursor-pointer" data-category="${category}">
+      let code = '';
+      if (category === 'ui-ux') {
+        code = `<!-- UI/UX Project: ${title} -->
+<article class="relative rounded-2xl shadow-xl overflow-hidden group cursor-pointer project-card reveal" data-category="ui-ux" onclick="openProjectModal('${safeTitle}', '${safeDesc}', '${img}', '${demo}')">
+  <img alt="${title}" class="w-full h-72 sm:h-80 object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" src="${img}" />
+  <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+    <h3 class="text-2xl font-bold text-cyan-400 mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${title}</h3>
+    <p class="text-gray-300 text-sm mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75 line-clamp-2">${desc}</p>
+    <div class="flex flex-wrap gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
+      <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm border border-cyan-500/30">${tag}</span>
+    </div>
+  </div>
+</article>`;
+      } else {
+        code = `<!-- Project: ${title} -->
+<article class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal" data-category="${category}">
  <div class="overflow-hidden">
   <img alt="${title}" class="w-full object-cover h-48 group-hover:scale-110 transition-transform duration-500" loading="lazy" src="${img}" />
  </div>
@@ -703,6 +993,7 @@
   </div>
  </div>
 </article>`;
+      }
 
       document.getElementById('generated-code').value = code;
       document.getElementById('generated-output-section').classList.remove('hidden');
@@ -742,35 +1033,110 @@
     document.body.style.overflow = 'hidden';
   }
 
+  // Modal open function for certificates
+  function openCertModal(pdfPath, title) {
+    const modal = document.getElementById('project-modal');
+    const modalContent = document.getElementById('modal-content');
+    
+    modalContent.innerHTML = `
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+            <h3 class="text-2xl sm:text-3xl font-bold text-cyan-400">${title} Certificate</h3>
+            <a href="${pdfPath}" download class="px-5 py-2.5 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm font-semibold transition flex items-center gap-2 border border-gray-600 shadow-lg">
+                <i class="fas fa-download"></i> Download PDF
+            </a>
+        </div>
+        <div class="w-full h-[60vh] sm:h-[75vh] rounded-xl overflow-hidden border border-gray-700 shadow-2xl bg-white relative">
+            <iframe src="${pdfPath}#toolbar=0&navpanes=0&scrollbar=0&view=FitH" class="w-full h-full border-none absolute inset-0 z-10" loading="lazy"></iframe>
+            <!-- Loading fallback background -->
+            <div class="absolute inset-0 flex items-center justify-center bg-gray-800 z-0">
+                <i class="fas fa-spinner fa-spin text-3xl text-cyan-400"></i>
+            </div>
+        </div>
+    `;
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
   // --- Portfolio Filtering Logic ---
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('#projects-grid article');
 
-  if (filterBtns.length > 0 && projectCards.length > 0) {
+  function applyFilter(filterValue) {
+    const uiuxSection = document.getElementById('uiux-section');
+    const aiSection = document.getElementById('ai-section');
+    if (!uiuxSection || !aiSection) return;
+    if (filterValue === 'all') {
+      uiuxSection.style.display = '';
+      aiSection.style.display = '';
+    } else if (filterValue === 'ui-ux') {
+      uiuxSection.style.display = '';
+      aiSection.style.display = 'none';
+    } else if (filterValue === 'ai') {
+      uiuxSection.style.display = 'none';
+      aiSection.style.display = '';
+    }
+  }
+
+  if (filterBtns.length > 0) {
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Reset all buttons
         filterBtns.forEach(b => {
           b.classList.remove('bg-cyan-600', 'text-white', 'shadow-[0_0_15px_rgba(34,211,238,0.4)]');
           b.classList.add('bg-gray-800', 'text-gray-300');
         });
-
-        // Set active button
         btn.classList.remove('bg-gray-800', 'text-gray-300');
         btn.classList.add('bg-cyan-600', 'text-white', 'shadow-[0_0_15px_rgba(34,211,238,0.4)]');
-
-        const filterValue = btn.getAttribute('data-filter');
-
-        projectCards.forEach(card => {
-          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+        applyFilter(btn.getAttribute('data-filter'));
       });
     });
   }
+
+  // --- UI/UX Slides Logic ---
+  (function() {
+    const track = document.getElementById('uiux-track');
+    const prevBtn = document.getElementById('uiux-prev');
+    const nextBtn = document.getElementById('uiux-next');
+    const dotsContainer = document.getElementById('uiux-dots');
+    const countEl = document.getElementById('uiux-count');
+    if (!track) return;
+
+    const slides = track.querySelectorAll('.uiux-slide');
+    const placeholder = document.getElementById('uiux-empty-placeholder');
+
+    if (slides.length === 0) {
+      if (placeholder) placeholder.style.display = 'flex';
+      if (countEl) countEl.textContent = '0 Projects';
+      if (prevBtn) prevBtn.style.opacity = '0.3';
+      if (nextBtn) nextBtn.style.opacity = '0.3';
+      return;
+    }
+    if (placeholder) placeholder.style.display = 'none';
+    if (countEl) countEl.textContent = slides.length + ' Project' + (slides.length > 1 ? 's' : '');
+
+    // Build dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'w-2 h-2 rounded-full transition-all duration-300 ' + (i === 0 ? 'bg-cyan-400 w-5' : 'bg-gray-600');
+      dot.addEventListener('click', () => scrollToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function scrollToSlide(index) {
+      const slideWidth = slides[0].offsetWidth + 24;
+      track.scrollTo({ left: slideWidth * index, behavior: 'smooth' });
+    }
+
+    function updateDots() {
+      const slideWidth = slides[0].offsetWidth + 24;
+      const active = Math.round(track.scrollLeft / slideWidth);
+      dotsContainer.querySelectorAll('button').forEach((d, i) => {
+        d.className = 'rounded-full transition-all duration-300 ' + (i === active ? 'bg-cyan-400 w-5 h-2' : 'w-2 h-2 bg-gray-600');
+      });
+    }
+
+    track.addEventListener('scroll', updateDots, { passive: true });
+    nextBtn && nextBtn.addEventListener('click', () => { track.scrollBy({ left: slides[0].offsetWidth + 24, behavior: 'smooth' }); });
+    prevBtn && prevBtn.addEventListener('click', () => { track.scrollBy({ left: -(slides[0].offsetWidth + 24), behavior: 'smooth' }); });
+  })();
 
   // --- Skills Scroll & Stagger Animation ---
   const skillItems = document.querySelectorAll('.skill-item');
@@ -841,6 +1207,76 @@
   if (typingTextElement) {
     setTimeout(typeEffect, 1000);
   }
+
+  // --- Dynamic Certificate Generator ---
+  // Aap yahan apni nayi details add kar sakte hain:
+  const certificateData = [
+    { pdf: 'images/certificate1.pdf', type: 'Achievement', title: 'View', icon: 'fa-medal', theme: 'cyan' },
+    { pdf: 'images/certificate2.pdf', type: 'Professional Skill', title: 'View', icon: 'fa-certificate', theme: 'indigo' },
+    { pdf: 'images/certificate3.pdf', type: 'Certification', title: 'View', icon: 'fa-trophy', theme: 'purple' },
+    { pdf: 'images/certificate4.pdf', type: 'Specialization', title: 'View', icon: 'fa-star', theme: 'blue' },
+    { pdf: 'images/certificate5.pdf', type: 'Recognition', title: 'View', icon: 'fa-graduation-cap', theme: 'pink' },
+    { pdf: 'images/certificate6.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
+    { pdf: 'images/certificate7.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
+    { pdf: 'images/certificate8.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
+    { pdf: 'images/certificate9.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
+    // Example of a new certificate:
+    // ,{ pdf: 'images/certificate7.pdf', type: 'Excellence', title: 'View', icon: 'fa-award', theme: 'cyan' }
+  ];
+
+  const getThemeClasses = (theme) => {
+     const themes = {
+       cyan: { border: 'group-hover:border-cyan-500/50', gradient: 'from-cyan-500/10 to-transparent', iconBg: 'bg-cyan-500/10', iconColor: 'text-cyan-400' },
+       indigo: { border: 'group-hover:border-indigo-500/50', gradient: 'from-indigo-500/10 to-transparent', iconBg: 'bg-indigo-500/10', iconColor: 'text-indigo-400' },
+       purple: { border: 'group-hover:border-purple-500/50', gradient: 'from-purple-500/10 to-transparent', iconBg: 'bg-purple-500/10', iconColor: 'text-purple-400' },
+       blue: { border: 'group-hover:border-blue-500/50', gradient: 'from-blue-500/10 to-transparent', iconBg: 'bg-blue-500/10', iconColor: 'text-blue-400' },
+       pink: { border: 'group-hover:border-pink-500/50', gradient: 'from-pink-500/10 to-transparent', iconBg: 'bg-pink-500/10', iconColor: 'text-pink-400' },
+       emerald: { border: 'group-hover:border-emerald-500/50', gradient: 'from-emerald-500/10 to-transparent', iconBg: 'bg-emerald-500/10', iconColor: 'text-emerald-400' }
+     };
+     return themes[theme] || themes['cyan'];
+  };
+
+  const createCertHTML = (cert) => {
+    const t = getThemeClasses(cert.theme);
+    return `
+        <div onclick="openCertModal('${cert.pdf}', '${cert.type}')" class="group relative w-[260px] h-[180px] sm:w-[340px] sm:h-[240px] flex flex-col rounded-2xl overflow-hidden bg-white border border-gray-700 ${t.border} shadow-lg transition-all duration-300 cursor-pointer flex-shrink-0 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)]">
+          
+          <!-- Full-Card Clean PDF Preview -->
+          <div class="absolute inset-0 bg-white overflow-hidden flex items-center justify-center">
+             
+             <!-- Hover Overlay -->
+             <div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/40 transition-colors duration-300 z-20 flex items-center justify-center pointer-events-none">
+                <div class="opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300 bg-gray-900/90 border border-gray-600 backdrop-blur-sm text-white px-6 py-3 rounded-full text-sm font-bold flex items-center gap-2 shadow-2xl">
+                   <i class="fas fa-expand-alt ${t.iconColor}"></i> View Certificate
+                </div>
+             </div>
+             
+             <!-- The actual PDF -->
+             <iframe src="${cert.pdf}#toolbar=0&navpanes=0&scrollbar=0&view=FitH" class="absolute top-0 left-0 w-full h-[150%] sm:h-[130%] pointer-events-none transform origin-top transition-transform duration-500 group-hover:scale-105 z-10" scrolling="no" loading="lazy"></iframe>
+          </div>
+        </div>`;
+  };
+
+  const renderCertificates = () => {
+     const trackLeft = document.getElementById('cert-track-left');
+     const trackRight = document.getElementById('cert-track-right');
+     if (!trackLeft || !trackRight) return;
+
+     const half = Math.ceil(certificateData.length / 2);
+     const leftCerts = certificateData.slice(0, half);
+     const rightCerts = certificateData.slice(half);
+
+     // Duplicate loop array items for infinite scroll effect
+     const generateTrackHTML = (certsArray) => {
+       const html = certsArray.map(createCertHTML).join('');
+       return html + html; 
+     };
+
+     trackLeft.innerHTML = generateTrackHTML(leftCerts);
+     trackRight.innerHTML = generateTrackHTML(rightCerts);
+  };
+
+  renderCertificates();
   </script>
  </body>
 </html>
