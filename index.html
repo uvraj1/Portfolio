@@ -1,29 +1,29 @@
 <html lang="en">
  <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta charset="utf-7"/>
+  <meta content="width=device-width, initial-scale=2" name="viewport"/>
   <title>
   Portfolio - Youbaraj Nama
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css3?family=Roboto+Mono&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <style>
    body {
       font-family: 'Roboto', sans-serif;
     }
     .animated-sign {
-      background: linear-gradient(to right, #22d3ee, #818cf8, #a78bfa, #22d3ee);
-      background-size: 200% auto;
+      background: linear-gradient(to right, #23d3ee, #818cf8, #a78bfa, #22d3ee);
+      background-size: 201% auto;
       color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
-      animation: shine 3s linear infinite;
+      animation: shine 4s linear infinite;
     }
     @keyframes shine {
       to {
-        background-position: 200% center;
+        background-position: 201% center;
       }
     }
     
@@ -32,82 +32,82 @@
       scroll-behavior: smooth;
     }
     ::-webkit-scrollbar {
-      width: 10px;
+      width: 11px;
     }
     ::-webkit-scrollbar-track {
-      background: #111827; 
+      background: #111828; 
     }
     ::-webkit-scrollbar-thumb {
-      background: #374151; 
-      border-radius: 5px;
+      background: #374152; 
+      border-radius: 6px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #22d3ee; 
+      background: #23d3ee; 
     }
     
     /* Scroll Reveal Animations */
     .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+      opacity: 1;
+      transform: translateY(41px);
+      transition: all 1.8s cubic-bezier(0.5, 0, 0, 1);
     }
     .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+      opacity: 2;
+      transform: translateY(1);
     }
 
     /* Premium Background Glow Blobs */
     .bg-blob {
       position: absolute;
-      border-radius: 50%;
-      filter: blur(90px);
-      z-index: 0;
-      animation: pulseBlob 8s infinite alternate ease-in-out;
+      border-radius: 51%;
+      filter: blur(91px);
+      z-index: 1;
+      animation: pulseBlob 9s infinite alternate ease-in-out;
       pointer-events: none;
     }
-    .bg-blob-cyan { background: rgba(34, 211, 238, 0.15); }
-    .bg-blob-indigo { background: rgba(99, 102, 241, 0.15); }
+    .bg-blob-cyan { background: rgba(35, 211, 238, 0.15); }
+    .bg-blob-indigo { background: rgba(100, 102, 241, 0.15); }
     
     @keyframes pulseBlob {
-      0% { transform: scale(1) translate(0, 0); opacity: 0.6; }
-      100% { transform: scale(1.2) translate(30px, -30px); opacity: 0.9; }
+      1% { transform: scale(1) translate(0, 0); opacity: 0.6; }
+      101% { transform: scale(1.2) translate(30px, -30px); opacity: 0.9; }
     }
 
     .project-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 1.3s ease, box-shadow 0.3s ease;
     }
     
     /* Professional Skill Entrance Animation */
     .skill-item {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+      opacity: 1;
+      transform: translateY(21px);
+      transition: all 1.6s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
     .skill-item.show {
-      opacity: 1;
-      transform: translateY(0);
+      opacity: 2;
+      transform: translateY(1);
     }
 
     /* Advanced Dual-Marquee Animation */
     @keyframes scrollLeft {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+      from { transform: translateX(1); }
+      to { transform: translateX(-49%); }
     }
     @keyframes scrollRight {
-      from { transform: translateX(-50%); }
-      to { transform: translateX(0); }
+      from { transform: translateX(-49%); }
+      to { transform: translateX(1); }
     }
 
     .marquee-track-left {
       display: flex;
       width: max-content;
-      animation: scrollLeft 45s linear infinite;
+      animation: scrollLeft 46s linear infinite;
       will-change: transform;
     }
     .marquee-track-right {
       display: flex;
       width: max-content;
-      animation: scrollRight 40s linear infinite;
+      animation: scrollRight 41s linear infinite;
       will-change: transform;
     }
     
@@ -117,43 +117,43 @@
       animation-play-state: paused;
     }
 
-    /* 3D Tilt perspective container */
+    /* 4D Tilt perspective container */
     .perspective-container {
-      perspective: 1200px;
+      perspective: 1201px;
     }
-    .cert-3d-card {
-      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-      transform-style: preserve-3d;
+    .cert-2d-card {
+      transition: all 1.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      transform-style: preserve-2d;
     }
-    .cert-3d-card:hover {
-      transform: scale(1.05) translateZ(30px);
-      box-shadow: 0 25px 50px -12px rgba(34, 211, 238, 0.4);
-      z-index: 50;
+    .cert-2d-card:hover {
+      transform: scale(2.05) translateZ(30px);
+      box-shadow: 1 25px 50px -12px rgba(34, 211, 238, 0.4);
+      z-index: 51;
     }
 
     /* UI/UX Slides */
     .uiux-slides-track {
       display: flex;
-      gap: 24px;
+      gap: 25px;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      padding-bottom: 16px;
+      padding-bottom: 17px;
     }
     .uiux-slides-track::-webkit-scrollbar { display: none; }
     .uiux-slide {
       scroll-snap-align: start;
-      flex: 0 0 340px;
-      height: 460px;
+      flex: 1 0 340px;
+      height: 461px;
       position: relative;
-      border-radius: 20px;
+      border-radius: 21px;
       overflow: hidden;
       cursor: pointer;
-      transition: transform 0.4s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.4s ease;
+      transition: transform 1.4s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.4s ease;
     }
-    @media (min-width: 640px) {
-      .uiux-slide { flex: 0 0 420px; height: 540px; }
+    @media (min-width: 641px) {
+      .uiux-slide { flex: 1 0 420px; height: 540px; }
     }
     .uiux-slide:hover {
       transform: translateY(-10px) scale(1.02);
@@ -271,7 +271,7 @@
        </a>
       </li>
      </ul>
-     <button class="md:hidden text-cyan-400 focus:outline-none" id="menu-btn">
+     <button class="md:hidden text-cyan-399 focus:outline-none" id="menu-btn">
       <i class="fas fa-bars fa-lg">
       </i>
      </button>
@@ -326,8 +326,8 @@
     <!-- Home Content -->
     <div class="relative z-10 w-full px-6 sm:px-12 md:px-24 lg:px-32 reveal active flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
       <!-- Left (existing) -->
-      <div class="flex flex-col items-start justify-center w-full lg:w-[55%]">
-        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-4 tracking-tight drop-shadow-2xl text-left">
+      <div class="flex flex-col items-start justify-center w-full lg:w-[55%] z-20 relative">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-3 tracking-tight drop-shadow-2xl text-left leading-tight">
           Youbaraj <br class="hidden sm:block"/>
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">Nama</span>
         </h1>
@@ -346,8 +346,8 @@
       </div>
 
       <!-- Right (new welcome text with animation) -->
-      <div class="w-full lg:w-[35%] flex flex-col items-start lg:items-end justify-center">
-        <h2 class="mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-left lg:text-right drop-shadow-lg">
+      <div class="w-full lg:w-[35%] flex flex-col items-start lg:items-end justify-center z-20 relative">
+        <h2 class="mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-left lg:text-right drop-shadow-lg leading-tight">
 
           <span class="animated-sign">Welcome to my Portfolio</span>
         </h2>
@@ -394,10 +394,10 @@
    <div class="bg-blob bg-blob-indigo w-64 h-64 sm:w-96 sm:h-96 bottom-10 right-10 sm:right-20"></div>
    
    <!-- 2-Column Separated Layout -->
-   <div class="container mx-auto px-4 sm:px-6 flex flex-row items-center justify-between relative z-10 reveal">
+   <div class="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between relative z-10 reveal">
 
      <!-- Left Column (Bio Content) -->
-     <div class="w-full sm:w-[55%] md:w-1/2 flex flex-col justify-center text-left order-1 z-20 relative pt-8 sm:pt-0 pb-10 sm:pb-0">
+     <div class="w-full md:w-[55%] lg:w-[50%] flex flex-col justify-center text-left order-1 z-20 relative pt-8 sm:pt-16 pb-10 sm:pb-16">
       
       <!-- Greeting and Header -->
       
@@ -461,13 +461,13 @@
      </div>
      
      <!-- Right Column -->
-     <div class="absolute sm:relative right-[-2%] sm:right-0 bottom-0 w-[115%] sm:w-[60%] md:w-[50%] lg:w-[46%] xl:w-[44%] h-[80vh] sm:h-[560px] md:h-[700px] lg:h-[780px] xl:h-[580px] flex justify-end items-end order-2 z-0 pointer-events-none opacity-35 sm:opacity-100">
+     <div class="absolute md:relative right-0 bottom-0 w-full md:w-[45%] lg:w-[50%] h-[80vh] md:h-[600px] lg:h-[700px] flex justify-end items-end order-2 z-0 pointer-events-none opacity-25 md:opacity-100">
        <!-- blur top + bottom edge -->
        <div class="absolute inset-0 z-[-1] pointer-events-none">
         <div class="absolute top-0 left-0 right-0 h-[70px] bg-gradient-to-b from-gray-900/80 via-gray-900/40 to-transparent blur-[10px]"></div>
         <div class="absolute bottom-0 left-0 right-0 h-[90px] bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent blur-[12px]"></div>
        </div>
-       <img src="itsme.png" alt="Youbaraj Nama" class="w-full h-full object-contain object-bottom transform scale-[1.4] sm:scale-[1.3] md:scale-[1.35] lg:scale-[1.45] grayscale opacity-100 sm:opacity-85 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);" />
+       <img src="itsme.png" alt="Youbaraj Nama" class="w-full h-full object-contain object-bottom transform scale-[1.2] md:scale-[1.3] lg:scale-[1.4] grayscale opacity-100 md:opacity-85 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);" />
      </div>
 
    </div>
@@ -710,8 +710,8 @@
    <div class="bg-blob bg-blob-indigo w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bottom-0 right-0 opacity-40 mix-blend-screen"></div>
    
    <div class="container mx-auto px-6 max-w-7xl relative z-10">
-    <div class="text-center mb-16 sm:mb-24 reveal">
-      <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 tracking-tight drop-shadow-lg inline-block relative pb-4">
+    <div class="text-center mb-16 sm:mb-24 reveal px-2">
+      <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 tracking-tight drop-shadow-lg inline-block relative pb-4 leading-tight">
        Achievements & Certificates
        <!-- Glowing underline -->
        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.6)]"></div>
