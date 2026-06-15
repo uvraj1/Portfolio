@@ -1,18 +1,21 @@
 <html lang="en">
- <head>
-  <meta charset="utf-7"/>
-  <meta content="width=device-width, initial-scale=2" name="viewport"/>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=1280" name="viewport" />
   <title>
-  Portfolio - Youbaraj Nama
+    Portfolio - Youbaraj Nama
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css3?family=Roboto+Mono&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css3?family=Roboto+Mono&amp;family=Roboto:wght@400;700&amp;display=swap"
+    rel="stylesheet" />
   <style>
-   body {
+    body {
       font-family: 'Roboto', sans-serif;
     }
+
     .animated-sign {
       background: linear-gradient(to right, #23d3ee, #818cf8, #a78bfa, #22d3ee);
       background-size: 201% auto;
@@ -21,36 +24,42 @@
       background-clip: text;
       animation: shine 4s linear infinite;
     }
+
     @keyframes shine {
       to {
         background-position: 201% center;
       }
     }
-    
+
     /* Smooth Scroll and Custom Scrollbar */
     html {
       scroll-behavior: smooth;
     }
+
     ::-webkit-scrollbar {
       width: 11px;
     }
+
     ::-webkit-scrollbar-track {
-      background: #111828; 
+      background: #111828;
     }
+
     ::-webkit-scrollbar-thumb {
-      background: #374152; 
+      background: #374152;
       border-radius: 6px;
     }
+
     ::-webkit-scrollbar-thumb:hover {
-      background: #23d3ee; 
+      background: #23d3ee;
     }
-    
+
     /* Scroll Reveal Animations */
     .reveal {
       opacity: 1;
       transform: translateY(41px);
       transition: all 1.8s cubic-bezier(0.5, 0, 0, 1);
     }
+
     .reveal.active {
       opacity: 2;
       transform: translateY(1);
@@ -65,24 +74,38 @@
       animation: pulseBlob 9s infinite alternate ease-in-out;
       pointer-events: none;
     }
-    .bg-blob-cyan { background: rgba(35, 211, 238, 0.15); }
-    .bg-blob-indigo { background: rgba(100, 102, 241, 0.15); }
-    
+
+    .bg-blob-cyan {
+      background: rgba(35, 211, 238, 0.15);
+    }
+
+    .bg-blob-indigo {
+      background: rgba(100, 102, 241, 0.15);
+    }
+
     @keyframes pulseBlob {
-      1% { transform: scale(1) translate(0, 0); opacity: 0.6; }
-      101% { transform: scale(1.2) translate(30px, -30px); opacity: 0.9; }
+      1% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0.6;
+      }
+
+      101% {
+        transform: scale(1.2) translate(30px, -30px);
+        opacity: 0.9;
+      }
     }
 
     .project-card {
       transition: transform 1.3s ease, box-shadow 0.3s ease;
     }
-    
+
     /* Professional Skill Entrance Animation */
     .skill-item {
       opacity: 1;
       transform: translateY(21px);
       transition: all 1.6s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
+
     .skill-item.show {
       opacity: 2;
       transform: translateY(1);
@@ -90,12 +113,23 @@
 
     /* Advanced Dual-Marquee Animation */
     @keyframes scrollLeft {
-      from { transform: translateX(1); }
-      to { transform: translateX(-49%); }
+      from {
+        transform: translateX(1);
+      }
+
+      to {
+        transform: translateX(-49%);
+      }
     }
+
     @keyframes scrollRight {
-      from { transform: translateX(-49%); }
-      to { transform: translateX(1); }
+      from {
+        transform: translateX(-49%);
+      }
+
+      to {
+        transform: translateX(1);
+      }
     }
 
     .marquee-track-left {
@@ -104,13 +138,14 @@
       animation: scrollLeft 46s linear infinite;
       will-change: transform;
     }
+
     .marquee-track-right {
       display: flex;
       width: max-content;
       animation: scrollRight 41s linear infinite;
       will-change: transform;
     }
-    
+
     /* Pause both rows when hovering over the container */
     .marquee-container:hover .marquee-track-left,
     .marquee-container:hover .marquee-track-right {
@@ -121,10 +156,12 @@
     .perspective-container {
       perspective: 1201px;
     }
+
     .cert-2d-card {
       transition: all 1.4s cubic-bezier(0.25, 0.8, 0.25, 1);
       transform-style: preserve-2d;
     }
+
     .cert-2d-card:hover {
       transform: scale(2.05) translateZ(30px);
       box-shadow: 1 25px 50px -12px rgba(34, 211, 238, 0.4);
@@ -141,7 +178,11 @@
       scrollbar-width: none;
       padding-bottom: 17px;
     }
-    .uiux-slides-track::-webkit-scrollbar { display: none; }
+
+    .uiux-slides-track::-webkit-scrollbar {
+      display: none;
+    }
+
     .uiux-slide {
       scroll-snap-align: start;
       flex: 1 0 340px;
@@ -150,162 +191,265 @@
       border-radius: 21px;
       overflow: hidden;
       cursor: pointer;
-      transition: transform 1.4s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.4s ease;
+      transition: transform 1.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
     }
+
     @media (min-width: 641px) {
-      .uiux-slide { flex: 1 0 420px; height: 540px; }
+      .uiux-slide {
+        flex: 1 0 420px;
+        height: 540px;
+      }
     }
+
     .uiux-slide:hover {
       transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(34,211,238,0.15);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(34, 211, 238, 0.15);
     }
+
     .uiux-slide img {
-      width: 100%; height: 100%; object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       transition: transform 0.6s ease;
     }
-    .uiux-slide:hover img { transform: scale(1.08); }
+
+    .uiux-slide:hover img {
+      transform: scale(1.08);
+    }
+
     .uiux-slide-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(3,7,18,0.97) 0%, rgba(3,7,18,0.5) 45%, rgba(3,7,18,0.05) 100%);
-      display: flex; flex-direction: column; justify-content: flex-end;
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(3, 7, 18, 0.97) 0%, rgba(3, 7, 18, 0.5) 45%, rgba(3, 7, 18, 0.05) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       padding: 28px 24px;
       transition: background 0.4s ease;
     }
+
     .uiux-slide:hover .uiux-slide-overlay {
-      background: linear-gradient(to top, rgba(3,7,18,0.99) 0%, rgba(3,7,18,0.7) 55%, rgba(3,7,18,0.1) 100%);
+      background: linear-gradient(to top, rgba(3, 7, 18, 0.99) 0%, rgba(3, 7, 18, 0.7) 55%, rgba(3, 7, 18, 0.1) 100%);
     }
+
     .uiux-slide-tag {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-      padding: 5px 14px; border-radius: 999px;
-      background: rgba(34,211,238,0.12); border: 1px solid rgba(34,211,238,0.3);
-      color: #22d3ee; margin-bottom: 10px; width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: rgba(34, 211, 238, 0.12);
+      border: 1px solid rgba(34, 211, 238, 0.3);
+      color: #22d3ee;
+      margin-bottom: 10px;
+      width: fit-content;
     }
+
     .uiux-slide-title {
-      font-size: 1.35rem; font-weight: 800; color: #fff;
-      line-height: 1.25; margin-bottom: 8px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 8px;
     }
-    @media (min-width: 640px) { .uiux-slide-title { font-size: 1.55rem; } }
+
+    @media (min-width: 640px) {
+      .uiux-slide-title {
+        font-size: 1.55rem;
+      }
+    }
+
     .uiux-slide-desc {
-      font-size: 13px; color: rgba(156,163,175,1);
-      line-height: 1.55; margin-bottom: 16px;
-      opacity: 0; transform: translateY(10px);
+      font-size: 13px;
+      color: rgba(156, 163, 175, 1);
+      line-height: 1.55;
+      margin-bottom: 16px;
+      opacity: 0;
+      transform: translateY(10px);
       transition: all 0.35s ease 0.05s;
     }
-    .uiux-slide:hover .uiux-slide-desc { opacity: 1; transform: translateY(0); }
+
+    .uiux-slide:hover .uiux-slide-desc {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .uiux-slide-tools {
-      display: flex; flex-wrap: wrap; gap: 7px;
-      opacity: 0; transform: translateY(8px);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      opacity: 0;
+      transform: translateY(8px);
       transition: all 0.35s ease 0.1s;
     }
-    .uiux-slide:hover .uiux-slide-tools { opacity: 1; transform: translateY(0); }
-    .uiux-tool-chip {
-      font-size: 11px; font-weight: 600; padding: 4px 12px;
-      border-radius: 999px; background: rgba(99,102,241,0.15);
-      border: 1px solid rgba(99,102,241,0.3); color: #a5b4fc;
+
+    .uiux-slide:hover .uiux-slide-tools {
+      opacity: 1;
+      transform: translateY(0);
     }
+
+    .uiux-tool-chip {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: #a5b4fc;
+    }
+
     .uiux-slide-btn {
-      margin-top: 14px; display: inline-flex; align-items: center; gap-8: 6px;
-      font-size: 13px; font-weight: 700; color: #22d3ee;
-      opacity: 0; transform: translateY(8px);
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap-8: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #22d3ee;
+      opacity: 0;
+      transform: translateY(8px);
       transition: all 0.35s ease 0.15s;
       text-decoration: none;
     }
-    .uiux-slide:hover .uiux-slide-btn { opacity: 1; transform: translateY(0); }
-    .uiux-slide-number {
-      position: absolute; top: 20px; right: 20px;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.35);
+
+    .uiux-slide:hover .uiux-slide-btn {
+      opacity: 1;
+      transform: translateY(0);
     }
+
+    .uiux-slide-number {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
     /* Scroll buttons */
     .uiux-scroll-btn {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: rgba(17,24,39,0.8); border: 1px solid rgba(55,65,81,0.7);
-      backdrop-filter: blur(8px); cursor: pointer; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      color: #9ca3af; transition: all 0.25s ease;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(17, 24, 39, 0.8);
+      border: 1px solid rgba(55, 65, 81, 0.7);
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      transition: all 0.25s ease;
     }
-    .uiux-scroll-btn:hover { border-color: rgba(34,211,238,0.5); color: #22d3ee; background: rgba(34,211,238,0.08); }
+
+    .uiux-scroll-btn:hover {
+      border-color: rgba(34, 211, 238, 0.5);
+      color: #22d3ee;
+      background: rgba(34, 211, 238, 0.08);
+    }
+
     /* Empty Slide add button */
     .uiux-add-slide {
-      flex: 0 0 340px; height: 460px;
-      border-radius: 20px; border: 2px dashed rgba(55,65,81,0.6);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 12px; color: rgba(75,85,99,1); cursor: default;
+      flex: 0 0 340px;
+      height: 460px;
+      border-radius: 20px;
+      border: 2px dashed rgba(55, 65, 81, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(75, 85, 99, 1);
+      cursor: default;
       scroll-snap-align: start;
     }
-    @media (min-width: 640px) { .uiux-add-slide { flex: 0 0 420px; height: 540px; } }
+
+    @media (min-width: 640px) {
+      .uiux-add-slide {
+        flex: 0 0 420px;
+        height: 540px;
+      }
+    }
   </style>
- </head>
- <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col overflow-x-hidden">
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col overflow-x-hidden">
   <!-- Header / Navbar -->
-  <header class="bg-gray-900/90 backdrop-blur-lg border-b border-gray-800/50 shadow-xl sticky top-0 z-50 transition-all">
-   <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-    <!-- Empty div taaki menu items naturally right side par align rahein -->
-    <div></div>
-    <nav>
-     <ul class="hidden md:flex space-x-8 text-gray-300 font-medium">
-      <li>
-       <a class="hover:text-cyan-400 transition" href="#home">
-        Home
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-cyan-400 transition" href="#about">
-        About
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-cyan-400 transition" href="#skills">
-        Skills
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-cyan-400 transition" href="#projects">
-        Projects
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-cyan-400 transition" href="#contact">
-        Contact
-       </a>
-      </li>
-     </ul>
-     <button class="md:hidden text-cyan-399 focus:outline-none" id="menu-btn">
-      <i class="fas fa-bars fa-lg">
-      </i>
-     </button>
-    </nav>
-   </div>
-   <div class="hidden md:hidden bg-gray-800 absolute top-full left-0 w-full border-b border-gray-700/50 shadow-2xl" id="mobile-menu">
-    <ul class="flex flex-col space-y-4 px-6 py-4 text-gray-300 font-medium">
-     <li>
-      <a class="mobile-link block hover:text-cyan-400 transition" href="#home">
-       Home
-      </a>
-     </li>
-     <li>
-      <a class="mobile-link block hover:text-cyan-400 transition" href="#about">
-       About
-      </a>
-     </li>
-     <li>
-      <a class="mobile-link block hover:text-cyan-400 transition" href="#skills">
-       Skills
-      </a>
-     </li>
-     <li>
-      <a class="mobile-link block hover:text-cyan-400 transition" href="#projects">
-       Projects
-      </a>
-     </li>
-     <li>
-      <a class="mobile-link block hover:text-cyan-400 transition" href="#contact">
-       Contact
-      </a>
-     </li>
-    </ul>
-   </div>
+  <header
+    class="bg-gray-900/90 backdrop-blur-lg border-b border-gray-800/50 shadow-xl sticky top-0 z-50 transition-all">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Empty div taaki menu items naturally right side par align rahein -->
+      <div></div>
+      <nav>
+        <ul class="hidden md:flex space-x-8 text-gray-300 font-medium">
+          <li>
+            <a class="hover:text-cyan-400 transition" href="#home">
+              Home
+            </a>
+          </li>
+          <li>
+            <a class="hover:text-cyan-400 transition" href="#about">
+              About
+            </a>
+          </li>
+          <li>
+            <a class="hover:text-cyan-400 transition" href="#skills">
+              Skills
+            </a>
+          </li>
+          <li>
+            <a class="hover:text-cyan-400 transition" href="#projects">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a class="hover:text-cyan-400 transition" href="#contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+        <button class="md:hidden text-cyan-399 focus:outline-none" id="menu-btn">
+          <i class="fas fa-bars fa-lg">
+          </i>
+        </button>
+      </nav>
+    </div>
+    <div class="hidden md:hidden bg-gray-800 absolute top-full left-0 w-full border-b border-gray-700/50 shadow-2xl"
+      id="mobile-menu">
+      <ul class="flex flex-col space-y-4 px-6 py-4 text-gray-300 font-medium">
+        <li>
+          <a class="mobile-link block hover:text-cyan-400 transition" href="#home">
+            Home
+          </a>
+        </li>
+        <li>
+          <a class="mobile-link block hover:text-cyan-400 transition" href="#about">
+            About
+          </a>
+        </li>
+        <li>
+          <a class="mobile-link block hover:text-cyan-400 transition" href="#skills">
+            Skills
+          </a>
+        </li>
+        <li>
+          <a class="mobile-link block hover:text-cyan-400 transition" href="#projects">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a class="mobile-link block hover:text-cyan-400 transition" href="#contact">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
   </header>
 
   <!-- Home / Video Hero Section -->
@@ -324,21 +468,25 @@
     </div>
 
     <!-- Home Content -->
-    <div class="relative z-10 w-full px-6 sm:px-12 md:px-24 lg:px-32 reveal active flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
+    <div
+      class="relative z-10 w-full px-6 sm:px-12 md:px-24 lg:px-32 reveal active flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
       <!-- Left (existing) -->
       <div class="flex flex-col items-start justify-center w-full lg:w-[55%] z-20 relative">
-        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-3 tracking-tight drop-shadow-2xl text-left leading-tight">
-          Youbaraj <br class="hidden sm:block"/>
+        <h1
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-3 tracking-tight drop-shadow-2xl text-left leading-tight">
+          Youbaraj <br class="hidden sm:block" />
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">Nama</span>
         </h1>
         <!-- Clean, Professional Minimalist Pill -->
         <div class="mb-10 flex flex-wrap items-center gap-3 sm:gap-4 mt-2">
-          <div class="flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-sm hover:bg-white/10 transition-colors duration-300">
+          <div
+            class="flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-sm hover:bg-white/10 transition-colors duration-300">
             <i class="fas fa-pen-nib text-cyan-400 text-sm"></i>
             <span class="text-gray-200 text-sm sm:text-base font-medium tracking-wide">UI/UX Designer</span>
           </div>
           <span class="text-gray-600 font-light text-lg hidden sm:block">&bull;</span>
-          <div class="flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-sm hover:bg-white/10 transition-colors duration-300">
+          <div
+            class="flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-sm hover:bg-white/10 transition-colors duration-300">
             <i class="fas fa-code-branch text-indigo-400 text-sm"></i>
             <span class="text-gray-200 text-sm sm:text-base font-medium tracking-wide">AI Agent Builder</span>
           </div>
@@ -347,7 +495,8 @@
 
       <!-- Right (new welcome text with animation) -->
       <div class="w-full lg:w-[35%] flex flex-col items-start lg:items-end justify-center z-20 relative">
-        <h2 class="mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-left lg:text-right drop-shadow-lg leading-tight">
+        <h2
+          class="mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-left lg:text-right drop-shadow-lg leading-tight">
 
           <span class="animated-sign">Welcome to my Portfolio</span>
         </h2>
@@ -367,10 +516,12 @@
     <!-- Social Buttons - Bottom Left -->
 
     <div class="absolute bottom-8 left-6 sm:bottom-12 sm:left-12 flex gap-4 z-20">
-      <a href="https://www.linkedin.com/in/youbarajnama" target="_blank" aria-label="LinkedIn" class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-900/50 border border-gray-700/50 backdrop-blur-md text-gray-300 hover:text-cyan-400 hover:bg-gray-800/80 hover:border-cyan-500/50 hover:-translate-y-1 transition-all duration-300 shadow-lg">
+      <a href="https://www.linkedin.com/in/youbarajnama" target="_blank" aria-label="LinkedIn"
+        class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-900/50 border border-gray-700/50 backdrop-blur-md text-gray-300 hover:text-cyan-400 hover:bg-gray-800/80 hover:border-cyan-500/50 hover:-translate-y-1 transition-all duration-300 shadow-lg">
         <i class="fab fa-linkedin-in text-lg sm:text-xl"></i>
       </a>
-      <a href="https://github.com/uvraj1" target="_blank" aria-label="GitHub" class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-900/50 border border-gray-700/50 backdrop-blur-md text-gray-300 hover:text-white hover:bg-gray-800/80 hover:border-white/50 hover:-translate-y-1 transition-all duration-300 shadow-lg">
+      <a href="https://github.com/uvraj1" target="_blank" aria-label="GitHub"
+        class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-900/50 border border-gray-700/50 backdrop-blur-md text-gray-300 hover:text-white hover:bg-gray-800/80 hover:border-white/50 hover:-translate-y-1 transition-all duration-300 shadow-lg">
         <i class="fab fa-github text-lg sm:text-xl"></i>
       </a>
     </div>
@@ -378,10 +529,16 @@
     <!-- Scroll Down Indicator - Bottom Center -->
     <div class="absolute bottom-8 sm:bottom-12 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
       <a href="#about" aria-label="Scroll Down" class="flex flex-col items-center group cursor-pointer">
-        <span class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-[0.2em] font-semibold mb-2 group-hover:text-cyan-400 transition-colors duration-300">Scroll</span>
-        <div class="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-500 group-hover:border-cyan-400 rounded-full flex justify-center p-1 transition-colors duration-300 relative overflow-hidden">
-          <div class="absolute inset-0 bg-gradient-to-b from-cyan-400/0 via-cyan-400/10 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div class="w-1 h-1.5 sm:w-1.5 sm:h-2 bg-gray-400 group-hover:bg-cyan-400 rounded-full translate-y-[-2px] group-hover:translate-y-[10px] transition-transform duration-700 ease-in-out"></div>
+        <span
+          class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-[0.2em] font-semibold mb-2 group-hover:text-cyan-400 transition-colors duration-300">Scroll</span>
+        <div
+          class="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-500 group-hover:border-cyan-400 rounded-full flex justify-center p-1 transition-colors duration-300 relative overflow-hidden">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-cyan-400/0 via-cyan-400/10 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          </div>
+          <div
+            class="w-1 h-1.5 sm:w-1.5 sm:h-2 bg-gray-400 group-hover:bg-cyan-400 rounded-full translate-y-[-2px] group-hover:translate-y-[10px] transition-transform duration-700 ease-in-out">
+          </div>
         </div>
 
       </a>
@@ -389,365 +546,476 @@
   </section>
 
   <!-- About Section -->
-  <section class="min-h-[90vh] md:min-h-[600px] xl:min-h-screen flex flex-col justify-center relative overflow-hidden pt-4 sm:pt-20 pb-0 sm:pb-10" id="about">
-   <div class="bg-blob bg-blob-cyan w-64 h-64 sm:w-96 sm:h-96 top-10 left-10 sm:left-10"></div>
-   <div class="bg-blob bg-blob-indigo w-64 h-64 sm:w-96 sm:h-96 bottom-10 right-10 sm:right-20"></div>
-   
-   <!-- 2-Column Separated Layout -->
-   <div class="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between relative z-10 reveal">
+  <section
+    class="min-h-[90vh] md:min-h-[600px] xl:min-h-screen flex flex-col justify-center relative overflow-hidden pt-4 sm:pt-20 pb-0 sm:pb-10"
+    id="about">
+    <div class="bg-blob bg-blob-cyan w-64 h-64 sm:w-96 sm:h-96 top-10 left-10 sm:left-10"></div>
+    <div class="bg-blob bg-blob-indigo w-64 h-64 sm:w-96 sm:h-96 bottom-10 right-10 sm:right-20"></div>
 
-     <!-- Left Column (Bio Content) -->
-     <div class="w-full md:w-[55%] lg:w-[50%] flex flex-col justify-center text-left order-1 z-20 relative pt-8 sm:pt-16 pb-10 sm:pb-16">
-      
-      <!-- Greeting and Header -->
-      
-      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight">
-        About <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500">Me</span>
-      </h2>
-      
-      <div class="glass-panel border border-gray-700/40 bg-gray-900/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-2xl mb-8 border-l-4 border-l-cyan-500 hover:border-l-indigo-500 transition-all duration-300">
-        <p class="text-gray-200 text-base sm:text-lg leading-relaxed mb-6 font-light">
-          Hi! I am <strong class="text-white font-semibold">Youbaraj Nama</strong>. I design beautiful user interfaces and engineer autonomous AI workflows. My focus is at the intersection of <span class="text-cyan-300 font-medium font-semibold">Design & Intelligence</span>—creating digital products that feel simple and intuitive for users, while automating complex background workflows to make operations incredibly efficient.
-        </p>
-        <p class="text-gray-300 text-sm sm:text-base leading-relaxed font-light">
-          Whether designing pixel-perfect screens, crafting clean design systems, or building intelligent AI agents to automate tasks, I specialize in bridging frontend aesthetics with backend logic. I love taking complex problems and simplifying them into beautiful, functional, and performant systems.
-        </p>
-      </div>
+    <!-- 2-Column Separated Layout -->
+    <div
+      class="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between relative z-10 reveal">
 
-      <!-- Tech Philosophy / 3 Pillars -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-        <div class="p-5 rounded-2xl bg-gray-900/25 border border-gray-800/80 backdrop-blur-md hover:border-cyan-500/30 hover:bg-gray-900/50 transition-all duration-300 group">
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-            <i class="fas fa-magic text-cyan-400"></i>
-          </div>
-          <h4 class="text-white font-semibold text-sm mb-1">Aesthetic Focus</h4>
-          <p class="text-gray-400 text-xs font-light">Creating pixel-perfect, clean, and intuitive interfaces that users love.</p>
+      <!-- Left Column (Bio Content) -->
+      <div
+        class="w-full md:w-[55%] lg:w-[50%] flex flex-col justify-center text-left order-1 z-20 relative pt-8 sm:pt-16 pb-10 sm:pb-16">
+
+        <!-- Greeting and Header -->
+
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight">
+          About <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500">Me</span>
+        </h2>
+
+        <div
+          class="glass-panel border border-gray-700/40 bg-gray-900/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-2xl mb-8 border-l-4 border-l-cyan-500 hover:border-l-indigo-500 transition-all duration-300">
+          <p class="text-gray-200 text-base sm:text-lg leading-relaxed mb-6 font-light">
+            Hi! I am <strong class="text-white font-semibold">Youbaraj Nama</strong>. I design beautiful user interfaces
+            and engineer autonomous AI workflows. My focus is at the intersection of <span
+              class="text-cyan-300 font-medium font-semibold">Design & Intelligence</span>—creating digital products
+            that feel simple and intuitive for users, while automating complex background workflows to make operations
+            incredibly efficient.
+          </p>
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed font-light">
+            Whether designing pixel-perfect screens, crafting clean design systems, or building intelligent AI agents to
+            automate tasks, I specialize in bridging frontend aesthetics with backend logic. I love taking complex
+            problems and simplifying them into beautiful, functional, and performant systems.
+          </p>
         </div>
 
-        <div class="p-5 rounded-2xl bg-gray-900/25 border border-gray-800/80 backdrop-blur-md hover:border-indigo-500/30 hover:bg-gray-900/50 transition-all duration-300 group">
-          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-            <i class="fas fa-robot text-indigo-400"></i>
+        <!-- Tech Philosophy / 3 Pillars -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+          <div
+            class="p-5 rounded-2xl bg-gray-900/25 border border-gray-800/80 backdrop-blur-md hover:border-cyan-500/30 hover:bg-gray-900/50 transition-all duration-300 group">
+            <div
+              class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-magic text-cyan-400"></i>
+            </div>
+            <h4 class="text-white font-semibold text-sm mb-1">Aesthetic Focus</h4>
+            <p class="text-gray-400 text-xs font-light">Creating pixel-perfect, clean, and intuitive interfaces that
+              users love.</p>
           </div>
-          <h4 class="text-white font-semibold text-sm mb-1">AI Automation</h4>
-          <p class="text-gray-400 text-xs font-light">Designing intelligent agents and custom logic to automate workflows.</p>
+
+          <div
+            class="p-5 rounded-2xl bg-gray-900/25 border border-gray-800/80 backdrop-blur-md hover:border-indigo-500/30 hover:bg-gray-900/50 transition-all duration-300 group">
+            <div
+              class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-robot text-indigo-400"></i>
+            </div>
+            <h4 class="text-white font-semibold text-sm mb-1">AI Automation</h4>
+            <p class="text-gray-400 text-xs font-light">Designing intelligent agents and custom logic to automate
+              workflows.</p>
+          </div>
+
+          <div
+            class="p-5 rounded-2xl bg-gray-900/25 border border-gray-800/80 backdrop-blur-md hover:border-purple-500/30 hover:bg-gray-900/50 transition-all duration-300 group">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-code text-purple-400"></i>
+            </div>
+            <h4 class="text-white font-semibold text-sm mb-1">Clean Integration</h4>
+            <p class="text-gray-400 text-xs font-light">Bridging design layers smoothly with responsive web code.</p>
+          </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-gray-900/25 border border-gray-800/80 backdrop-blur-md hover:border-purple-500/30 hover:bg-gray-900/50 transition-all duration-300 group">
-          <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-            <i class="fas fa-code text-purple-400"></i>
-          </div>
-          <h4 class="text-white font-semibold text-sm mb-1">Clean Integration</h4>
-          <p class="text-gray-400 text-xs font-light">Bridging design layers smoothly with responsive web code.</p>
-        </div>
-      </div>
-
-      <!-- Action Area -->
-      <div class="flex flex-wrap items-center gap-6">
-        <a href="Youbaraj_Nama_Resume.pdf" download="Youbaraj_Nama_Resume.pdf" class="px-8 py-3.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-bold rounded-full shadow-[0_10px_20px_rgba(34,211,238,0.2)] hover:shadow-[0_15px_30px_rgba(34,211,238,0.4)] transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 text-sm">
-          <span>Download CV</span>
-          <i class="fas fa-file-download text-base"></i>
-        </a>
-        <div class="w-[1px] h-8 bg-gray-700"></div>
-        <div class="flex items-center gap-4 text-gray-400 text-xl">
-          <a href="https://www.linkedin.com/in/youbarajnama" target="_blank" class="hover:text-cyan-400 hover:scale-110 transform transition duration-300" aria-label="LinkedIn Profile">
-            <i class="fab fa-linkedin"></i>
+        <!-- Action Area -->
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="Youbaraj_Nama_Resume.pdf" download="Youbaraj_Nama_Resume.pdf"
+            class="px-8 py-3.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-bold rounded-full shadow-[0_10px_20px_rgba(34,211,238,0.2)] hover:shadow-[0_15px_30px_rgba(34,211,238,0.4)] transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 text-sm">
+            <span>Download CV</span>
+            <i class="fas fa-file-download text-base"></i>
           </a>
-          <a href="https://github.com/uvraj1" target="_blank" class="hover:text-cyan-400 hover:scale-110 transform transition duration-300" aria-label="GitHub Profile">
-            <i class="fab fa-github"></i>
-          </a>
+          <div class="w-[1px] h-8 bg-gray-700"></div>
+          <div class="flex items-center gap-4 text-gray-400 text-xl">
+            <a href="https://www.linkedin.com/in/youbarajnama" target="_blank"
+              class="hover:text-cyan-400 hover:scale-110 transform transition duration-300"
+              aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/uvraj1" target="_blank"
+              class="hover:text-cyan-400 hover:scale-110 transform transition duration-300" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
+
       </div>
 
-     </div>
-     
-     <!-- Right Column -->
-     <div class="absolute md:relative right-0 bottom-0 w-full md:w-[45%] lg:w-[50%] h-[80vh] md:h-[600px] lg:h-[700px] flex justify-end items-end order-2 z-0 pointer-events-none opacity-25 md:opacity-100">
-       <!-- blur top + bottom edge -->
-       <div class="absolute inset-0 z-[-1] pointer-events-none">
-        <div class="absolute top-0 left-0 right-0 h-[70px] bg-gradient-to-b from-gray-900/80 via-gray-900/40 to-transparent blur-[10px]"></div>
-        <div class="absolute bottom-0 left-0 right-0 h-[90px] bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent blur-[12px]"></div>
-       </div>
-       <img src="itsme.png" alt="Youbaraj Nama" class="w-full h-full object-contain object-bottom transform scale-[1.2] md:scale-[1.3] lg:scale-[1.4] grayscale opacity-100 md:opacity-85 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);" />
-     </div>
+      <!-- Right Column -->
+      <div
+        class="absolute md:relative right-0 bottom-0 w-full md:w-[45%] lg:w-[50%] h-[80vh] md:h-[600px] lg:h-[700px] flex justify-end items-end order-2 z-0 pointer-events-none opacity-25 md:opacity-100">
+        <!-- blur top + bottom edge -->
+        <div class="absolute inset-0 z-[-1] pointer-events-none">
+          <div
+            class="absolute top-0 left-0 right-0 h-[70px] bg-gradient-to-b from-gray-900/80 via-gray-900/40 to-transparent blur-[10px]">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 right-0 h-[90px] bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent blur-[12px]">
+          </div>
+        </div>
+        <img src="itsme.png" alt="Youbaraj Nama"
+          class="w-full h-full object-contain object-bottom transform scale-[1.2] md:scale-[1.3] lg:scale-[1.4] grayscale opacity-100 md:opacity-85 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+          style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);" />
+      </div>
 
-   </div>
+    </div>
   </section>
 
 
   <!-- Skills Section -->
 
-<section class="bg-gray-800 flex flex-col justify-center py-16 sm:py-24 relative overflow-hidden" id="skills">
-   <div class="bg-blob bg-blob-cyan w-56 h-56 sm:w-80 sm:h-80 top-10 sm:top-20 right-10 sm:right-20"></div>
-   <div class="container mx-auto px-6 relative z-10">
-    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 mb-10 sm:mb-16 text-center reveal tracking-tight">
-     Skills &amp; Expertise
-    </h2>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-10 gap-y-10 sm:gap-y-16 max-w-6xl mx-auto">
+  <section class="bg-gray-800 flex flex-col justify-center py-16 sm:py-24 relative overflow-hidden" id="skills">
+    <div class="bg-blob bg-blob-cyan w-56 h-56 sm:w-80 sm:h-80 top-10 sm:top-20 right-10 sm:right-20"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      <h2
+        class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 mb-10 sm:mb-16 text-center reveal tracking-tight">
+        Skills &amp; Expertise
+      </h2>
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-10 gap-y-10 sm:gap-y-16 max-w-6xl mx-auto">
 
-      <!-- Skill 1 -->
-      <div class="skill-item flex flex-col items-center space-y-3">
-        <i class="fas fa-network-wired text-5xl sm:text-6xl text-indigo-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
-        <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">AI Agent Architecture</h3>
-        <p class="text-gray-400 text-center text-sm">Designing autonomous agents with complex task-solving logic and workflows.</p>
+        <!-- Skill 1 -->
+        <div class="skill-item flex flex-col items-center space-y-3">
+          <i
+            class="fas fa-network-wired text-5xl sm:text-6xl text-indigo-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
+          <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">AI Agent Architecture</h3>
+          <p class="text-gray-400 text-center text-sm">Designing autonomous agents with complex task-solving logic and
+            workflows.</p>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="skill-item flex flex-col items-center space-y-3">
+          <i
+            class="fas fa-sync text-5xl sm:text-6xl text-emerald-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
+          <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">AI Workflow Automation</h3>
+          <p class="text-gray-400 text-center text-sm">Streamlining processes by integrating AI models and automation
+            tools.</p>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="skill-item flex flex-col items-center space-y-3">
+          <i
+            class="fas fa-project-diagram text-5xl sm:text-6xl text-amber-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
+          <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">System Logic & Integration</h3>
+          <p class="text-gray-400 text-center text-sm">Bridging backend AI logic with intuitive frontend experiences.
+          </p>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="skill-item flex flex-col items-center space-y-3">
+          <i
+            class="fab fa-python text-5xl sm:text-6xl text-blue-500 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
+          <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">Python GUI Development</h3>
+          <p class="text-gray-400 text-center text-sm">Building intelligent, high-performance desktop interfaces using
+            Python.</p>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="skill-item flex flex-col items-center space-y-3">
+          <i
+            class="fas fa-user-check text-5xl sm:text-6xl text-rose-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
+          <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">User Experience (UX)</h3>
+          <p class="text-gray-400 text-center text-sm">Crafting intuitive user journeys through research and
+            wireframing.</p>
+        </div>
+
+        <!-- Skill 6 -->
+        <div class="skill-item flex flex-col items-center space-y-3">
+          <i
+            class="fab fa-react text-5xl sm:text-6xl text-cyan-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
+          <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">React.js & Tailwind CSS</h3>
+          <p class="text-gray-400 text-center text-sm">Developing responsive web applications with clean and scalable
+            code.</p>
+        </div>
+
+        <!-- Skill 7 -->
+        <div class="skill-item flex flex-col items-center space-y-3">
+          <i
+            class="fas fa-mobile-alt text-5xl sm:text-6xl text-purple-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
+          <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">Mobile App Design</h3>
+          <p class="text-gray-400 text-center text-sm">Designing seamless interactive interfaces for mobile platforms.
+          </p>
+        </div>
+
+        <!-- Skill 8 -->
+        <div class="skill-item flex flex-col items-center space-y-3">
+          <i
+            class="fas fa-laptop-code text-5xl sm:text-6xl text-red-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
+          <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">User Interface (UI)</h3>
+          <p class="text-gray-400 text-center text-sm">Creating pixel-perfect designs and interactive prototypes.</p>
+        </div>
+
       </div>
-
-      <!-- Skill 2 -->
-      <div class="skill-item flex flex-col items-center space-y-3">
-        <i class="fas fa-sync text-5xl sm:text-6xl text-emerald-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
-        <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">AI Workflow Automation</h3>
-        <p class="text-gray-400 text-center text-sm">Streamlining processes by integrating AI models and automation tools.</p>
-      </div>
-
-      <!-- Skill 3 -->
-      <div class="skill-item flex flex-col items-center space-y-3">
-        <i class="fas fa-project-diagram text-5xl sm:text-6xl text-amber-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
-        <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">System Logic & Integration</h3>
-        <p class="text-gray-400 text-center text-sm">Bridging backend AI logic with intuitive frontend experiences.</p>
-      </div>
-
-      <!-- Skill 4 -->
-      <div class="skill-item flex flex-col items-center space-y-3">
-        <i class="fab fa-python text-5xl sm:text-6xl text-blue-500 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
-        <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">Python GUI Development</h3>
-        <p class="text-gray-400 text-center text-sm">Building intelligent, high-performance desktop interfaces using Python.</p>
-      </div>
-
-      <!-- Skill 5 -->
-      <div class="skill-item flex flex-col items-center space-y-3">
-        <i class="fas fa-user-check text-5xl sm:text-6xl text-rose-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
-        <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">User Experience (UX)</h3>
-        <p class="text-gray-400 text-center text-sm">Crafting intuitive user journeys through research and wireframing.</p>
-      </div>
-
-      <!-- Skill 6 -->
-      <div class="skill-item flex flex-col items-center space-y-3">
-        <i class="fab fa-react text-5xl sm:text-6xl text-cyan-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
-        <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">React.js & Tailwind CSS</h3>
-        <p class="text-gray-400 text-center text-sm">Developing responsive web applications with clean and scalable code.</p>
-      </div>
-
-      <!-- Skill 7 -->
-      <div class="skill-item flex flex-col items-center space-y-3">
-        <i class="fas fa-mobile-alt text-5xl sm:text-6xl text-purple-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
-        <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">Mobile App Design</h3>
-        <p class="text-gray-400 text-center text-sm">Designing seamless interactive interfaces for mobile platforms.</p>
-      </div>
-
-      <!-- Skill 8 -->
-      <div class="skill-item flex flex-col items-center space-y-3">
-        <i class="fas fa-laptop-code text-5xl sm:text-6xl text-red-400 mb-4 hover:scale-110 transition-transform duration-300 drop-shadow-lg"></i>
-        <h3 class="text-base sm:text-lg font-semibold text-gray-200 text-center">User Interface (UI)</h3>
-        <p class="text-gray-400 text-center text-sm">Creating pixel-perfect designs and interactive prototypes.</p>
-      </div>
-
-     </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="flex flex-col justify-center relative overflow-hidden py-16 sm:py-24 border-t border-gray-800/50" id="projects">
-   <div class="bg-blob bg-blob-indigo w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] top-1/4 -left-24 sm:-left-48"></div>
-   <div class="bg-blob bg-blob-cyan w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] bottom-1/4 -right-24 sm:-right-48"></div>
-   <div class="container mx-auto px-6 max-w-7xl relative z-10">
-   <h2 class="reveal text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 mb-8 sm:mb-12 text-center tracking-tight">
-    My Projects
-   </h2>
-   <!-- Filter Buttons -->
-   <div class="reveal flex justify-center flex-wrap gap-2 sm:gap-4 mb-8 sm:mb-12">
-    <button class="filter-btn bg-cyan-600 text-white px-5 py-2 sm:px-8 sm:py-3 text-sm sm:text-base rounded-full font-semibold transition shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(34,211,238,0.6)]" data-filter="ai">AI Projects</button>
-    <button class="filter-btn bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-1.5 sm:px-6 sm:py-2 text-sm sm:text-base rounded-full font-semibold transition" data-filter="ui-ux">UI/UX Design</button>
-   </div>
+  <section class="flex flex-col justify-center relative overflow-hidden py-16 sm:py-24 border-t border-gray-800/50"
+    id="projects">
+    <div class="bg-blob bg-blob-indigo w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] top-1/4 -left-24 sm:-left-48">
+    </div>
+    <div class="bg-blob bg-blob-cyan w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] bottom-1/4 -right-24 sm:-right-48">
+    </div>
+    <div class="container mx-auto px-6 max-w-7xl relative z-10">
+      <h2
+        class="reveal text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 mb-8 sm:mb-12 text-center tracking-tight">
+        My Projects
+      </h2>
+      <!-- Filter Buttons -->
+      <div class="reveal flex justify-center flex-wrap gap-2 sm:gap-4 mb-8 sm:mb-12">
+        <button
+          class="filter-btn bg-cyan-600 text-white px-5 py-2 sm:px-8 sm:py-3 text-sm sm:text-base rounded-full font-semibold transition shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(34,211,238,0.6)]"
+          data-filter="ai">AI Projects</button>
+        <button
+          class="filter-btn bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-1.5 sm:px-6 sm:py-2 text-sm sm:text-base rounded-full font-semibold transition"
+          data-filter="ui-ux">UI/UX Design</button>
+      </div>
 
-   <!-- ═══════════════════════════════════════════════════════
+      <!-- ═══════════════════════════════════════════════════════
         UI/UX DESIGN SHOWCASE — Horizontal Slides
    ═══════════════════════════════════════════════════════ -->
-   <div id="uiux-section" class="reveal mb-16" style="display: none;">
-     <!-- Section header -->
-     <div class="flex items-center justify-between mb-6">
-       <div class="flex items-center gap-3">
-         <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/25 flex items-center justify-center">
-           <i class="fas fa-pen-nib text-cyan-400 text-sm"></i>
-         </div>
-         <h3 class="text-lg sm:text-xl font-bold text-white">UI/UX Design <span class="text-cyan-400">Showcase</span></h3>
-         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400" id="uiux-count">0 Projects</span>
-       </div>
-       <!-- Scroll arrows -->
-       <div class="flex gap-2">
-         <button class="uiux-scroll-btn" id="uiux-prev" aria-label="Scroll left"><i class="fas fa-arrow-left text-sm"></i></button>
-         <button class="uiux-scroll-btn" id="uiux-next" aria-label="Scroll right"><i class="fas fa-arrow-right text-sm"></i></button>
-       </div>
-     </div>
+      <div id="uiux-section" class="reveal mb-16" style="display: none;">
+        <!-- Section header -->
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/25 flex items-center justify-center">
+              <i class="fas fa-pen-nib text-cyan-400 text-sm"></i>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white">UI/UX Design <span class="text-cyan-400">Showcase</span>
+            </h3>
+            <span
+              class="text-xs font-semibold px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400"
+              id="uiux-count">0 Projects</span>
+          </div>
+          <!-- Scroll arrows -->
+          <div class="flex gap-2">
+            <button class="uiux-scroll-btn" id="uiux-prev" aria-label="Scroll left"><i
+                class="fas fa-arrow-left text-sm"></i></button>
+            <button class="uiux-scroll-btn" id="uiux-next" aria-label="Scroll right"><i
+                class="fas fa-arrow-right text-sm"></i></button>
+          </div>
+        </div>
 
-     <!-- Slides track -->
-     <div class="uiux-slides-track" id="uiux-track">
+        <!-- Slides track -->
+        <div class="uiux-slides-track" id="uiux-track">
 
-       <!-- ─── UI/UX Project: Job India ─── -->
+          <!-- ─── UI/UX Project: Job India ─── -->
 
-       <!-- Job Search App UI -->
-       <div class="uiux-slide" onclick="openUiuxModal('Job Search App UI', `<b>Project Overview:</b><br>Yeh interface ek comprehensive job search platform ko represent karta hai, jiska mukhya uddeshya job seekers ko unke ideal roles tak asaani se pahunchana hai. Design main focus User Experience (UX) aur Navigation par hai.<br><br><span class=\'text-cyan-400\'><b>Key UI/UX Components:</b></span><br><br><b>Dashboard (Home Screen):</b><br>• <b>Search Functionality:</b> Prominent search bar jahan users job titles ya companies ko search kar sakte hain.<br>• <b>Filters:</b> Location, sector, aur job type refine karne ki suvidha.<br>• <b>Categories:</b> Popular Careers & Hiring Giants ke cards.<br><br><b>Navigation Bar:</b><br>Bottom navigation bar (Jobs, Saved, Pro, Applied, Profile) for quick access.<br><br><b>Profile & Personalization:</b><br>• Personal info, resume, portfolio, skills, aur education management.<br>• <b>Profile Strength Indicator:</b> Gamification to encourage profile completion.<br><br><b>AI Integration:</b><br>• <b>Umma AI:</b> Built-in AI assistant to solve queries and streamline job hunt.<br><br><b>Settings & Customization:</b><br>• Language options (multi-lingual) and visual appearance (Light/Dark mode).`, ['images/image1.jpeg','images/image2.jpeg','images/image3.jpeg','images/image4.jpeg','images/image5.jpeg','images/image6.jpeg','images/image7.jpeg','images/image8.jpeg','images/image9.jpeg','images/image10.jpeg'], ['Figma', 'Mobile UI', 'UX Research', 'AI Integration'])">
-         <img src="images/image1.jpeg" alt="Job Search App UI" />
-         <div class="uiux-slide-overlay">
-           <span class="uiux-slide-tag"><i class="fas fa-mobile-alt"></i> UI/UX Design</span>
-           <div class="uiux-slide-title">Job Search App UI</div>
-           <div class="uiux-slide-desc">A comprehensive job search platform with Umma AI, advanced filters & gamified profile.</div>
-           <div class="uiux-slide-tools">
-             <span class="uiux-tool-chip">Figma</span>
-             <span class="uiux-tool-chip">Mobile UI</span>
-             <span class="uiux-tool-chip">UX Research</span>
-           </div>
-           <span class="uiux-slide-btn">View Details <i class="fas fa-arrow-right ml-2"></i></span>
-         </div>
-         <span class="uiux-slide-number">01</span>
-       </div>
+          <!-- Job Search App UI -->
+          <div class="uiux-slide"
+            onclick="openUiuxModal('Job Search App UI', `<b>Project Overview:</b><br>Yeh interface ek comprehensive job search platform ko represent karta hai, jiska mukhya uddeshya job seekers ko unke ideal roles tak asaani se pahunchana hai. Design main focus User Experience (UX) aur Navigation par hai.<br><br><span class=\'text-cyan-400\'><b>Key UI/UX Components:</b></span><br><br><b>Dashboard (Home Screen):</b><br>• <b>Search Functionality:</b> Prominent search bar jahan users job titles ya companies ko search kar sakte hain.<br>• <b>Filters:</b> Location, sector, aur job type refine karne ki suvidha.<br>• <b>Categories:</b> Popular Careers & Hiring Giants ke cards.<br><br><b>Navigation Bar:</b><br>Bottom navigation bar (Jobs, Saved, Pro, Applied, Profile) for quick access.<br><br><b>Profile & Personalization:</b><br>• Personal info, resume, portfolio, skills, aur education management.<br>• <b>Profile Strength Indicator:</b> Gamification to encourage profile completion.<br><br><b>AI Integration:</b><br>• <b>Umma AI:</b> Built-in AI assistant to solve queries and streamline job hunt.<br><br><b>Settings & Customization:</b><br>• Language options (multi-lingual) and visual appearance (Light/Dark mode).`, ['images/image1.jpeg','images/image2.jpeg','images/image3.jpeg','images/image4.jpeg','images/image5.jpeg','images/image6.jpeg','images/image7.jpeg','images/image8.jpeg','images/image9.jpeg','images/image10.jpeg'], ['Figma', 'Mobile UI', 'UX Research', 'AI Integration'])">
+            <img src="images/image1.jpeg" alt="Job Search App UI" />
+            <div class="uiux-slide-overlay">
+              <span class="uiux-slide-tag"><i class="fas fa-mobile-alt"></i> UI/UX Design</span>
+              <div class="uiux-slide-title">Job Search App UI</div>
+              <div class="uiux-slide-desc">A comprehensive job search platform with Umma AI, advanced filters & gamified
+                profile.</div>
+              <div class="uiux-slide-tools">
+                <span class="uiux-tool-chip">Figma</span>
+                <span class="uiux-tool-chip">Mobile UI</span>
+                <span class="uiux-tool-chip">UX Research</span>
+              </div>
+              <span class="uiux-slide-btn">View Details <i class="fas fa-arrow-right ml-2"></i></span>
+            </div>
+            <span class="uiux-slide-number">01</span>
+          </div>
 
-     </div>
+        </div>
 
-     <!-- Dot indicators -->
-     <div class="flex justify-center gap-2 mt-5" id="uiux-dots"></div>
-   </div>
+        <!-- Dot indicators -->
+        <div class="flex justify-center gap-2 mt-5" id="uiux-dots"></div>
+      </div>
 
-   <!-- ═══════════════════════════════════════════════════════
+      <!-- ═══════════════════════════════════════════════════════
         AI & DEV PROJECTS — Card Grid
    ═══════════════════════════════════════════════════════ -->
-   <div id="ai-section">
-     <div class="flex items-center gap-3 mb-6 reveal">
-       <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/25 flex items-center justify-center">
-         <i class="fas fa-robot text-indigo-400 text-sm"></i>
-       </div>
-       <h3 class="text-lg sm:text-xl font-bold text-white">AI & Dev <span class="text-indigo-400">Projects</span></h3>
-     </div>
-   <div class="grid gap-6 md:gap-12 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3" id="projects-grid">
+      <div id="ai-section">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/25 flex items-center justify-center">
+            <i class="fas fa-robot text-indigo-400 text-sm"></i>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-white">AI & Dev <span class="text-indigo-400">Projects</span>
+          </h3>
+        </div>
+        <div class="grid gap-6 md:gap-12 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-3" id="projects-grid">
 
 
-    <!-- Project 1: LUCIFER AI VOICE ASSISTENT -->
-    <article class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal" data-category="ai">
-     <div class="overflow-hidden">
-       <img alt="LUCIFER AI VOICE ASSISTENT" class="w-full object-cover h-48 group-hover:scale-110 transition-transform duration-500" loading="lazy" src="images/Screenshot 2026-05-17 015600.png" />
-     </div>
-     <div class="p-6 flex flex-col flex-1">
-      <h3 class="text-xl font-semibold text-indigo-400 mb-2">LUCIFER AI VOICE ASSISTENT</h3>
-      <p class="text-gray-400 flex-1 mb-4">AI VOICE ASSISTENT DESKTOP APPLICATION & WEBSITE</p>
-      <div class="flex flex-wrap gap-2 mb-4">
-       <span class="bg-indigo-700 text-indigo-300 px-3 py-1 rounded-full text-xs font-semibold">Python, React, HTML, JS Script</span>
-      </div>
-      <div class="mt-auto flex flex-wrap gap-3">
-       <a class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-semibold transition text-center" href="https://lucifer-ai-web.youbarajnama2015.workers.dev" target="_blank" rel="noopener noreferrer">
-        View Demo
-       </a>
-      </div>
-     </div>
-    </article>
-    
-    <!-- Project 2 -->
-    <!-- Project: YOUKTA FACTORY -->
-<article class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal" style="transition-delay: 100ms;" data-category="ai">
- <div class="overflow-hidden">
-   <img alt="YOUKTA FACTORY" class="w-full object-cover h-48 group-hover:scale-110 transition-transform duration-500" loading="lazy" src="images/Screenshot 2026-05-09 185707.png" />
- </div>
- <div class="p-6 flex flex-col flex-1">
-  <h3 class="text-xl font-semibold text-indigo-400 mb-2">YOUKTA APP FACTORY</h3>
-  <p class="text-gray-400 flex-1 mb-4">Youkta Factory is a powerful multi-agent ecosystem designed to turn ideas into production-ready digital products instantly. By leveraging a swarm of specialized AI agents, it automates the creation of Websites, Android Apps, Utility Tools, and AI Bots from scratch.</p>
-  <div class="flex flex-wrap gap-2 mb-4">
-   <span class="bg-indigo-700 text-indigo-300 px-3 py-1 rounded-full text-xs font-semibold">HTML, JAVA, Python, REACT,</span>
-  </div>
-      <div class="mt-auto flex flex-wrap gap-3">
-   <a class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-semibold transition text-center" href="https://youkta-factory.vercel.app/" target="_blank" rel="noopener noreferrer">
-    View Demo
-   </a>
-  </div>
- </div>
-</article>
-    <!-- Project 3 -->
-    <!-- Project: NEURAL STORE -->
-<article class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal" style="transition-delay: 200ms;" data-category="ai">
- <div class="overflow-hidden">
-  <img alt="NEURAL STORE" class="w-full object-cover h-48 group-hover:scale-110 transition-transform duration-500" loading="lazy" src="images/Screenshot 2026-05-10 003635.png" />
- </div>
- <div class="p-6 flex flex-col flex-1">
-  <h3 class="text-xl font-semibold text-indigo-400 mb-2">NEURAL STORE</h3>
-  <p class="text-gray-400 flex-1 mb-4">An e-commerce website dedicated to tech products. Neural Store showcases modern design principles, optimized product filtering, and a robust architecture for digital commerce.</p>
-  <div class="flex flex-wrap gap-2 mb-4">
-   <span class="bg-indigo-700 text-indigo-300 px-3 py-1 rounded-full text-xs font-semibold">Python, HTML, Css, REACT, JSS</span>
-  </div>
-      <div class="mt-auto flex flex-wrap gap-3">
-   <a class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-semibold transition text-center" href="https://youkta-neural-store.vercel.app/" target="_blank" rel="noopener noreferrer">
-    View Demo
-   </a>
-  </div>
- </div>
-</article>
-    <!-- Project 4 -->
-    <!-- Project: YOUKTA GAME FACTORY -->
-<article class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal" style="transition-delay: 300ms;" data-category="ai">
- <div class="overflow-hidden">
-  <img alt="YOUKTA GAME FACTORY" class="w-full object-cover h-48 group-hover:scale-110 transition-transform duration-500" loading="lazy" src="images/Screenshot 2026-05-13 230059.png" />
- </div>
- <div class="p-6 flex flex-col flex-1">
-  <h3 class="text-xl font-semibold text-indigo-400 mb-2">YOUKTA GAME FACTORY</h3>
-  <p class="text-gray-400 flex-1 mb-4">A powerful, all-in-one web ecosystem for building Android game apps and scaling games with speed and precision.</p>
-  <div class="flex flex-wrap gap-2 mb-4">
-   <span class="bg-indigo-700 text-indigo-300 px-3 py-1 rounded-full text-xs font-semibold">Python, HTML, Css, REACT, JSS</span>
-  </div>
-      <div class="mt-auto flex flex-wrap gap-3">
-   <a class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-semibold transition text-center" href="https://youkta-game-factory.vercel.app/" target="_blank" rel="noopener noreferrer">
-    View Demo
-   </a>
-  </div>
- </div>
-</article>
-<!-- Project 6 -->
-    <!-- Project 7 -->
-    <!-- Project 8 -->
-   </div>
-   </div><!-- /ai-section -->
-   </div>
+          <!-- Project 1: LUCIFER AI VOICE ASSISTENT -->
+          <article
+            class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal"
+            data-category="ai">
+            <div class="overflow-hidden">
+              <img alt="LUCIFER AI VOICE ASSISTENT"
+                class="w-full object-cover h-48 group-hover:scale-110 transition-transform duration-500" loading="lazy"
+                src="images/Screenshot 2026-05-17 015600.png" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-semibold text-indigo-400 mb-2">LUCIFER AI VOICE ASSISTENT</h3>
+              <p class="text-gray-400 flex-1 mb-4">AI VOICE ASSISTENT DESKTOP APPLICATION & WEBSITE</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-indigo-700 text-indigo-300 px-3 py-1 rounded-full text-xs font-semibold">Python, React,
+                  HTML, JS Script</span>
+              </div>
+              <div class="mt-auto flex flex-wrap gap-3">
+                <a class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-semibold transition text-center"
+                  href="https://lucifer-ai-web.youbarajnama2015.workers.dev" target="_blank" rel="noopener noreferrer">
+                  View Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <!-- Project: YOUKTA FACTORY -->
+          <article
+            class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal"
+            style="transition-delay: 100ms;" data-category="ai">
+            <div class="overflow-hidden">
+              <img alt="YOUKTA FACTORY"
+                class="w-full object-cover h-48 group-hover:scale-110 transition-transform duration-500" loading="lazy"
+                src="images/Screenshot 2026-05-09 185707.png" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-semibold text-indigo-400 mb-2">YOUKTA APP FACTORY</h3>
+              <p class="text-gray-400 flex-1 mb-4">Youkta Factory is a powerful multi-agent ecosystem designed to turn
+                ideas into production-ready digital products instantly. By leveraging a swarm of specialized AI agents,
+                it automates the creation of Websites, Android Apps, Utility Tools, and AI Bots from scratch.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-indigo-700 text-indigo-300 px-3 py-1 rounded-full text-xs font-semibold">HTML, JAVA,
+                  Python, REACT,</span>
+              </div>
+              <div class="mt-auto flex flex-wrap gap-3">
+                <a class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-semibold transition text-center"
+                  href="https://youkta-factory.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  View Demo
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Project 3 -->
+          <!-- Project: NEURAL STORE -->
+          <article
+            class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal"
+            style="transition-delay: 200ms;" data-category="ai">
+            <div class="overflow-hidden">
+              <img alt="NEURAL STORE"
+                class="w-full object-cover h-48 group-hover:scale-110 transition-transform duration-500" loading="lazy"
+                src="images/Screenshot 2026-05-10 003635.png" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-semibold text-indigo-400 mb-2">NEURAL STORE</h3>
+              <p class="text-gray-400 flex-1 mb-4">An e-commerce website dedicated to tech products. Neural Store
+                showcases modern design principles, optimized product filtering, and a robust architecture for digital
+                commerce.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-indigo-700 text-indigo-300 px-3 py-1 rounded-full text-xs font-semibold">Python, HTML,
+                  Css, REACT, JSS</span>
+              </div>
+              <div class="mt-auto flex flex-wrap gap-3">
+                <a class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-semibold transition text-center"
+                  href="https://youkta-neural-store.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  View Demo
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Project 4 -->
+          <!-- Project: YOUKTA GAME FACTORY -->
+          <article
+            class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal"
+            style="transition-delay: 300ms;" data-category="ai">
+            <div class="overflow-hidden">
+              <img alt="YOUKTA GAME FACTORY"
+                class="w-full object-cover h-48 group-hover:scale-110 transition-transform duration-500" loading="lazy"
+                src="images/Screenshot 2026-05-13 230059.png" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-semibold text-indigo-400 mb-2">YOUKTA GAME FACTORY</h3>
+              <p class="text-gray-400 flex-1 mb-4">A powerful, all-in-one web ecosystem for building Android game apps
+                and scaling games with speed and precision.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-indigo-700 text-indigo-300 px-3 py-1 rounded-full text-xs font-semibold">Python, HTML,
+                  Css, REACT, JSS</span>
+              </div>
+              <div class="mt-auto flex flex-wrap gap-3">
+                <a class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-semibold transition text-center"
+                  href="https://youkta-game-factory.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  View Demo
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Project 6 -->
+          <!-- Project 7 -->
+          <!-- Project 8 -->
+        </div>
+      </div><!-- /ai-section -->
+    </div>
   </section>
 
   <!-- Certificates Section -->
   <section class="bg-gray-900 py-20 sm:py-32 relative overflow-hidden border-t border-gray-800/50" id="certificates">
-   <!-- Animated Background Elements -->
-   <div class="bg-blob bg-blob-cyan w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] top-0 left-0 opacity-40 mix-blend-screen"></div>
-   <div class="bg-blob bg-blob-indigo w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bottom-0 right-0 opacity-40 mix-blend-screen"></div>
-   
-   <div class="container mx-auto px-6 max-w-7xl relative z-10">
-    <div class="text-center mb-16 sm:mb-24 reveal px-2">
-      <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 tracking-tight drop-shadow-lg inline-block relative pb-4 leading-tight">
-       Achievements & Certificates
-       <!-- Glowing underline -->
-       <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.6)]"></div>
-      </h2>
-      <p class="mt-8 text-gray-400 max-w-2xl mx-auto text-lg sm:text-xl font-light">Showcasing my continuous learning journey and professional milestones through verified credentials.</p>
+    <!-- Animated Background Elements -->
+    <div
+      class="bg-blob bg-blob-cyan w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] top-0 left-0 opacity-40 mix-blend-screen">
     </div>
-    
-    <!-- Animated Dual Marquee System -->
-    <div class="marquee-container perspective-container relative w-full overflow-hidden flex flex-col gap-6 sm:gap-10 reveal">
-      <!-- Gradient Masks -->
-      <div class="absolute left-0 top-0 w-12 sm:w-32 h-full bg-gradient-to-r from-gray-900 to-transparent z-20 pointer-events-none"></div>
-      <div class="absolute right-0 top-0 w-12 sm:w-32 h-full bg-gradient-to-l from-gray-900 to-transparent z-20 pointer-events-none"></div>
+    <div
+      class="bg-blob bg-blob-indigo w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bottom-0 right-0 opacity-40 mix-blend-screen">
+    </div>
 
-      <!-- Row 1: Scrolling Left -->
-      <div id="cert-track-left" class="marquee-track-left gap-6 sm:gap-10">
-        <!-- Certificates will be dynamically injected here by JavaScript -->
+    <div class="container mx-auto px-6 max-w-7xl relative z-10">
+      <div class="text-center mb-16 sm:mb-24 reveal px-2">
+        <h2
+          class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 tracking-tight drop-shadow-lg inline-block relative pb-4 leading-tight">
+          Achievements & Certificates
+          <!-- Glowing underline -->
+          <div
+            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.6)]">
+          </div>
+        </h2>
+        <p class="mt-8 text-gray-400 max-w-2xl mx-auto text-lg sm:text-xl font-light">Showcasing my continuous learning
+          journey and professional milestones through verified credentials.</p>
       </div>
 
-      <!-- Row 2: Scrolling Right -->
-      <div id="cert-track-right" class="marquee-track-right gap-6 sm:gap-10">
-        <!-- Certificates will be dynamically injected here by JavaScript -->
+      <!-- Animated Dual Marquee System -->
+      <div
+        class="marquee-container perspective-container relative w-full overflow-hidden flex flex-col gap-6 sm:gap-10 reveal">
+        <!-- Gradient Masks -->
+        <div
+          class="absolute left-0 top-0 w-12 sm:w-32 h-full bg-gradient-to-r from-gray-900 to-transparent z-20 pointer-events-none">
+        </div>
+        <div
+          class="absolute right-0 top-0 w-12 sm:w-32 h-full bg-gradient-to-l from-gray-900 to-transparent z-20 pointer-events-none">
+        </div>
+
+        <!-- Row 1: Scrolling Left -->
+        <div id="cert-track-left" class="marquee-track-left gap-6 sm:gap-10">
+          <!-- Certificates will be dynamically injected here by JavaScript -->
+        </div>
+
+        <!-- Row 2: Scrolling Right -->
+        <div id="cert-track-right" class="marquee-track-right gap-6 sm:gap-10">
+          <!-- Certificates will be dynamically injected here by JavaScript -->
+        </div>
       </div>
     </div>
-   </div>
   </section>
   <!-- UI/UX Project Detail Modal -->
-  <div id="uiux-modal" class="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden" role="dialog" aria-modal="true">
-    <div class="relative bg-gray-900 border border-gray-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
-      <button onclick="closeUiuxModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center z-10 transition">
+  <div id="uiux-modal"
+    class="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden" role="dialog"
+    aria-modal="true">
+    <div
+      class="relative bg-gray-900 border border-gray-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <button onclick="closeUiuxModal()"
+        class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center z-10 transition">
         <i class="fas fa-times"></i>
       </button>
       <div class="p-6 sm:p-8">
         <!-- Header -->
         <div class="mb-6">
           <div class="flex items-center gap-2 mb-2">
-            <span class="uiux-slide-tag" style="position:static;margin:0" id="uiux-modal-tag"><i class="fas fa-pen-nib"></i> UI/UX Design</span>
+            <span class="uiux-slide-tag" style="position:static;margin:0" id="uiux-modal-tag"><i
+                class="fas fa-pen-nib"></i> UI/UX Design</span>
           </div>
           <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-2" id="uiux-modal-title"></h3>
           <p class="text-gray-400 text-sm sm:text-base leading-relaxed" id="uiux-modal-desc"></p>
@@ -759,208 +1027,250 @@
       </div>
     </div>
   </div>
-  <div aria-describedby="modal-description" aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex items-center justify-center p-6 z-50 hidden" id="project-modal" role="dialog">
-   <div class="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
-    <button aria-label="Close modal" class="absolute top-4 right-4 text-gray-400 hover:text-indigo-500 text-2xl focus:outline-none" id="modal-close">
-     <i class="fas fa-times">
-     </i>
-    </button>
-    <div class="p-6 text-gray-300" id="modal-content">
-     <!-- Dynamic content inserted here -->
+  <div aria-describedby="modal-description" aria-labelledby="modal-title" aria-modal="true"
+    class="fixed inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex items-center justify-center p-6 z-50 hidden"
+    id="project-modal" role="dialog">
+    <div class="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+      <button aria-label="Close modal"
+        class="absolute top-4 right-4 text-gray-400 hover:text-indigo-500 text-2xl focus:outline-none" id="modal-close">
+        <i class="fas fa-times">
+        </i>
+      </button>
+      <div class="p-6 text-gray-300" id="modal-content">
+        <!-- Dynamic content inserted here -->
+      </div>
     </div>
-   </div>
   </div>
 
   <!-- Admin Code Generator Modal -->
-  <div aria-modal="true" class="fixed inset-0 bg-black bg-opacity-95 backdrop-blur-sm flex items-center justify-center p-4 z-[60] hidden" id="admin-generator-modal" role="dialog">
-   <div class="bg-gray-800 rounded-lg max-w-3xl w-full max-h-[95vh] overflow-y-auto shadow-2xl border border-indigo-500 p-6 relative">
-    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl focus:outline-none" id="admin-generator-close"><i class="fas fa-times"></i></button>
-    <h3 class="text-2xl font-bold text-indigo-400 mb-6"><i class="fas fa-code"></i> Project Code Generator</h3>
-    <p class="text-gray-400 mb-6 text-sm">Fill details to generate HTML for your new project. Copy and paste the result into your <code>index.html</code> inside the <code>#projects-grid</code>.</p>
-    
-    <form id="code-generator-form" class="space-y-4">
-     <div>
-      <label class="block text-sm font-medium text-gray-400 mb-1">Project Title</label>
-      <input class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" id="gen-title" required type="text" placeholder="E.g., AI Chatbot" />
-     </div>
-     <div>
-      <label class="block text-sm font-medium text-gray-400 mb-1">Project Category</label>
-      <select class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" id="gen-category" required>
-       <option value="ai">AI Project</option>
-       <option value="ui-ux">UI/UX Project</option>
-      </select>
-     </div>
-     <div>
-      <label class="block text-sm font-medium text-gray-400 mb-1">Short Description</label>
-      <textarea class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" id="gen-desc" required rows="2" placeholder="Describe the project..."></textarea>
-     </div>
-     <div>
-      <label class="block text-sm font-medium text-gray-400 mb-1">Technology Tag</label>
-      <input class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" id="gen-tag" required type="text" placeholder="E.g., Python" />
-     </div>
-     <div>
-      <label class="block text-sm font-medium text-gray-400 mb-1">Image URL</label>
-      <input class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" id="gen-img" required type="url" placeholder="https://..." />
-     </div>
-     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div>
-       <label class="block text-sm font-medium text-gray-400 mb-1">Demo Link</label>
-       <input class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" id="gen-demo" type="url" placeholder="https://..." />
-      </div>
-      <div>
-       <label class="block text-sm font-medium text-gray-400 mb-1">GitHub Link</label>
-       <input class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" id="gen-github" type="url" placeholder="https://github.com/uvraj1" />
-      </div>
-     </div>
-     <button type="submit" class="w-full mt-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded transition shadow-lg">Generate HTML Code</button>
-    </form>
+  <div aria-modal="true"
+    class="fixed inset-0 bg-black bg-opacity-95 backdrop-blur-sm flex items-center justify-center p-4 z-[60] hidden"
+    id="admin-generator-modal" role="dialog">
+    <div
+      class="bg-gray-800 rounded-lg max-w-3xl w-full max-h-[95vh] overflow-y-auto shadow-2xl border border-indigo-500 p-6 relative">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl focus:outline-none"
+        id="admin-generator-close"><i class="fas fa-times"></i></button>
+      <h3 class="text-2xl font-bold text-indigo-400 mb-6"><i class="fas fa-code"></i> Project Code Generator</h3>
+      <p class="text-gray-400 mb-6 text-sm">Fill details to generate HTML for your new project. Copy and paste the
+        result into your <code>index.html</code> inside the <code>#projects-grid</code>.</p>
 
-    <div id="generated-output-section" class="mt-8 hidden border-t border-gray-700 pt-6">
-     <h4 class="text-lg font-bold text-green-400 mb-2">Generated HTML (Copy this):</h4>
-     <textarea id="generated-code" class="w-full h-40 px-3 py-2 rounded bg-gray-900 text-gray-300 font-mono text-sm border border-gray-600 focus:outline-none" readonly></textarea>
-     <button id="copy-code-btn" class="mt-3 w-full bg-green-600 hover:bg-green-500 text-white font-bold py-2 rounded transition"><i class="fas fa-copy"></i> Copy to Clipboard</button>
+      <form id="code-generator-form" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Project Title</label>
+          <input
+            class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            id="gen-title" required type="text" placeholder="E.g., AI Chatbot" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Project Category</label>
+          <select
+            class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            id="gen-category" required>
+            <option value="ai">AI Project</option>
+            <option value="ui-ux">UI/UX Project</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Short Description</label>
+          <textarea
+            class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            id="gen-desc" required rows="2" placeholder="Describe the project..."></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Technology Tag</label>
+          <input
+            class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            id="gen-tag" required type="text" placeholder="E.g., Python" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-400 mb-1">Image URL</label>
+          <input
+            class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            id="gen-img" required type="url" placeholder="https://..." />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-400 mb-1">Demo Link</label>
+            <input
+              class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              id="gen-demo" type="url" placeholder="https://..." />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-400 mb-1">GitHub Link</label>
+            <input
+              class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              id="gen-github" type="url" placeholder="https://github.com/uvraj1" />
+          </div>
+        </div>
+        <button type="submit"
+          class="w-full mt-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded transition shadow-lg">Generate
+          HTML Code</button>
+      </form>
+
+      <div id="generated-output-section" class="mt-8 hidden border-t border-gray-700 pt-6">
+        <h4 class="text-lg font-bold text-green-400 mb-2">Generated HTML (Copy this):</h4>
+        <textarea id="generated-code"
+          class="w-full h-40 px-3 py-2 rounded bg-gray-900 text-gray-300 font-mono text-sm border border-gray-600 focus:outline-none"
+          readonly></textarea>
+        <button id="copy-code-btn"
+          class="mt-3 w-full bg-green-600 hover:bg-green-500 text-white font-bold py-2 rounded transition"><i
+            class="fas fa-copy"></i> Copy to Clipboard</button>
+      </div>
     </div>
-   </div>
   </div>
 
 
 
   <!-- Contact Section -->
-  <section class="bg-gradient-to-b from-gray-800 to-gray-900 flex flex-col justify-center py-16 sm:py-24 relative overflow-hidden" id="contact">
-   <div class="bg-blob bg-blob-cyan w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] top-10 sm:top-20 left-1/2 transform -translate-x-1/2"></div>
-   <div class="container mx-auto px-6 max-w-3xl relative z-10 reveal">
-    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 mb-8 sm:mb-12 text-center tracking-tight">
-     Get In Touch
-    </h2>
-   <form action="mailto:youbarajnama@outlook.com" class="bg-gray-900/40 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-6 sm:p-10 shadow-2xl relative" enctype="text/plain" method="POST">
-     <div class="mb-5 sm:mb-8">
-      <label class="block mb-2 font-semibold text-gray-300" for="name">
-       Name
-      </label>
-      <input class="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-gray-800/60 border border-gray-600 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300" id="name" name="name" placeholder="Your full name" required="" type="text"/>
-     </div>
-     <div class="mb-5 sm:mb-8">
-      <label class="block mb-2 font-semibold text-gray-300" for="email">
-       Email
-      </label>
-      <input class="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-gray-800/60 border border-gray-600 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300" id="email" name="email" placeholder="your.email@gmail.com" required="" type="email"/>
-     </div>
-     <div class="mb-6 sm:mb-10">
-      <label class="block mb-2 font-semibold text-gray-300" for="message">
-       Message
-      </label>
-      <textarea class="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-gray-800/60 border border-gray-600 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300" id="message" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
-     </div>
-     <button class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-3 sm:py-4 rounded-xl shadow-[0_10px_20px_rgba(34,211,238,0.2)] hover:shadow-[0_15px_30px_rgba(34,211,238,0.4)] transform hover:-translate-y-1 transition-all duration-300" type="submit">
-      Send Message
-     </button>
-    </form>
-   </div>
+  <section
+    class="bg-gradient-to-b from-gray-800 to-gray-900 flex flex-col justify-center py-16 sm:py-24 relative overflow-hidden"
+    id="contact">
+    <div
+      class="bg-blob bg-blob-cyan w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] top-10 sm:top-20 left-1/2 transform -translate-x-1/2">
+    </div>
+    <div class="container mx-auto px-6 max-w-3xl relative z-10 reveal">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 mb-8 sm:mb-12 text-center tracking-tight">
+        Get In Touch
+      </h2>
+      <form action="mailto:youbarajnama@outlook.com"
+        class="bg-gray-900/40 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-6 sm:p-10 shadow-2xl relative"
+        enctype="text/plain" method="POST">
+        <div class="mb-5 sm:mb-8">
+          <label class="block mb-2 font-semibold text-gray-300" for="name">
+            Name
+          </label>
+          <input
+            class="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-gray-800/60 border border-gray-600 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+            id="name" name="name" placeholder="Your full name" required="" type="text" />
+        </div>
+        <div class="mb-5 sm:mb-8">
+          <label class="block mb-2 font-semibold text-gray-300" for="email">
+            Email
+          </label>
+          <input
+            class="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-gray-800/60 border border-gray-600 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+            id="email" name="email" placeholder="your.email@gmail.com" required="" type="email" />
+        </div>
+        <div class="mb-6 sm:mb-10">
+          <label class="block mb-2 font-semibold text-gray-300" for="message">
+            Message
+          </label>
+          <textarea
+            class="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-gray-800/60 border border-gray-600 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+            id="message" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
+        </div>
+        <button
+          class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-3 sm:py-4 rounded-xl shadow-[0_10px_20px_rgba(34,211,238,0.2)] hover:shadow-[0_15px_30px_rgba(34,211,238,0.4)] transform hover:-translate-y-1 transition-all duration-300"
+          type="submit">
+          Send Message
+        </button>
+      </form>
+    </div>
   </section>
   <!-- Footer -->
   <footer class="bg-gray-950 py-8 mt-auto border-t border-gray-800">
-   <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
-    © 2026 Youbaraj Nama. UI/UX & AI
-   </div>
+    <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+      © 2026 Youbaraj Nama. UI/UX & AI
+    </div>
   </footer>
   <script>
-   // --- UI/UX Modal ---
-  function openUiuxModal(title, desc, screenshots, tools) {
-    document.getElementById('uiux-modal-title').textContent = title;
-    document.getElementById('uiux-modal-desc').innerHTML = desc;
-    const toolsEl = document.getElementById('uiux-modal-tools');
-    toolsEl.innerHTML = tools.map(t => `<span class="uiux-tool-chip">${t}</span>`).join('');
-    const ssEl = document.getElementById('uiux-modal-screenshots');
-    ssEl.innerHTML = screenshots.map(src => `<img src="${src}" class="w-full rounded-xl border border-gray-800 object-cover" alt="Screenshot" />`).join('');
-    document.getElementById('uiux-modal').classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeUiuxModal() {
-    document.getElementById('uiux-modal').classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-  document.getElementById('uiux-modal').addEventListener('click', function(e) {
-    if (e.target === this) closeUiuxModal();
-  });
-
-  const menuBtn = document.getElementById('menu-btn');
-   const mobileMenu = document.getElementById('mobile-menu');
-
-   if (menuBtn && mobileMenu) {
-     menuBtn.addEventListener('click', () => {
-       mobileMenu.classList.toggle('hidden');
-     });
-   }
-
-   const mobileLinks = document.querySelectorAll('.mobile-link');
-   if (mobileLinks.length > 0 && mobileMenu) {
-     mobileLinks.forEach(link => {
-       link.addEventListener('click', () => {
-         mobileMenu.classList.add('hidden');
-       });
-     });
-   }
-
-   const modal = document.getElementById('project-modal');
-   const modalContent = document.getElementById('modal-content');
-   const modalClose = document.getElementById('modal-close');
-
-   if (modalClose && modal) {
-     modalClose.addEventListener('click', () => {
-       modal.classList.add('hidden');
-       modalContent.innerHTML = '';
-       document.body.style.overflow = '';
-     });
-
-     modal.addEventListener('click', (e) => {
-       if (e.target === modal) {
-         modal.classList.add('hidden');
-         modalContent.innerHTML = '';
-         document.body.style.overflow = '';
-       }
-     });
-   }
-
-  // --- Code Generator Admin Panel Logic ---
-  const contactNameInput = document.getElementById('name');
-  const adminGenModal = document.getElementById('admin-generator-modal');
-  const adminGenClose = document.getElementById('admin-generator-close');
-
-  if (contactNameInput && adminGenModal) {
-    contactNameInput.addEventListener('input', (e) => {
-      if (e.target.value.trim() === 'Uvraj@321') {
-        adminGenModal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        e.target.value = ''; // clear input
-      }
-    });
-  }
-
-  if (adminGenClose) {
-    adminGenClose.addEventListener('click', () => {
-      adminGenModal.classList.add('hidden');
+    // --- UI/UX Modal ---
+    function openUiuxModal(title, desc, screenshots, tools) {
+      document.getElementById('uiux-modal-title').textContent = title;
+      document.getElementById('uiux-modal-desc').innerHTML = desc;
+      const toolsEl = document.getElementById('uiux-modal-tools');
+      toolsEl.innerHTML = tools.map(t => `<span class="uiux-tool-chip">${t}</span>`).join('');
+      const ssEl = document.getElementById('uiux-modal-screenshots');
+      ssEl.innerHTML = screenshots.map(src => `<img src="${src}" class="w-full rounded-xl border border-gray-800 object-cover" alt="Screenshot" />`).join('');
+      document.getElementById('uiux-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeUiuxModal() {
+      document.getElementById('uiux-modal').classList.add('hidden');
       document.body.style.overflow = '';
+    }
+    document.getElementById('uiux-modal').addEventListener('click', function (e) {
+      if (e.target === this) closeUiuxModal();
     });
-  }
 
-  const genForm = document.getElementById('code-generator-form');
-  if (genForm) {
-    genForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const title = document.getElementById('gen-title').value.trim();
-      const category = document.getElementById('gen-category').value;
-      const desc = document.getElementById('gen-desc').value.trim();
-      const tag = document.getElementById('gen-tag').value.trim();
-      const img = document.getElementById('gen-img').value.trim();
-      const demo = document.getElementById('gen-demo').value.trim();
-      const github = document.getElementById('gen-github').value.trim() || '#';
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-      const safeTitle = title.replace(/'/g, "\\'");
-      const safeDesc = desc.replace(/'/g, "\\'");
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
 
-      let code = '';
-      if (category === 'ui-ux') {
-        code = `<!-- UI/UX Project: ${title} -->
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    if (mobileLinks.length > 0 && mobileMenu) {
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    const modal = document.getElementById('project-modal');
+    const modalContent = document.getElementById('modal-content');
+    const modalClose = document.getElementById('modal-close');
+
+    if (modalClose && modal) {
+      modalClose.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modalContent.innerHTML = '';
+        document.body.style.overflow = '';
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          modalContent.innerHTML = '';
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
+    // --- Code Generator Admin Panel Logic ---
+    const contactNameInput = document.getElementById('name');
+    const adminGenModal = document.getElementById('admin-generator-modal');
+    const adminGenClose = document.getElementById('admin-generator-close');
+
+    if (contactNameInput && adminGenModal) {
+      contactNameInput.addEventListener('input', (e) => {
+        if (e.target.value.trim() === 'Uvraj@321') {
+          adminGenModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+          e.target.value = ''; // clear input
+        }
+      });
+    }
+
+    if (adminGenClose) {
+      adminGenClose.addEventListener('click', () => {
+        adminGenModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+    }
+
+    const genForm = document.getElementById('code-generator-form');
+    if (genForm) {
+      genForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const title = document.getElementById('gen-title').value.trim();
+        const category = document.getElementById('gen-category').value;
+        const desc = document.getElementById('gen-desc').value.trim();
+        const tag = document.getElementById('gen-tag').value.trim();
+        const img = document.getElementById('gen-img').value.trim();
+        const demo = document.getElementById('gen-demo').value.trim();
+        const github = document.getElementById('gen-github').value.trim() || '#';
+
+        const safeTitle = title.replace(/'/g, "\\'");
+        const safeDesc = desc.replace(/'/g, "\\'");
+
+        let code = '';
+        if (category === 'ui-ux') {
+          code = `<!-- UI/UX Project: ${title} -->
 <article class="relative rounded-2xl shadow-xl overflow-hidden group cursor-pointer project-card reveal" data-category="ui-ux" onclick="openProjectModal('${safeTitle}', '${safeDesc}', '${img}', '${demo}')">
   <img alt="${title}" class="w-full h-72 sm:h-80 object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" src="${img}" />
   <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
@@ -971,8 +1281,8 @@
     </div>
   </div>
 </article>`;
-      } else {
-        code = `<!-- Project: ${title} -->
+        } else {
+          code = `<!-- Project: ${title} -->
 <article class="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col project-card hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(99,102,241,0.4)] group cursor-pointer border border-gray-700/50 reveal" data-category="${category}">
  <div class="overflow-hidden">
   <img alt="${title}" class="w-full object-cover h-48 group-hover:scale-110 transition-transform duration-500" loading="lazy" src="${img}" />
@@ -993,52 +1303,52 @@
   </div>
  </div>
 </article>`;
-      }
+        }
 
-      document.getElementById('generated-code').value = code;
-      document.getElementById('generated-output-section').classList.remove('hidden');
-    });
-  }
-
-  const copyBtn = document.getElementById('copy-code-btn');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', () => {
-      const codeArea = document.getElementById('generated-code');
-      codeArea.select();
-      document.execCommand('copy');
-      copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-      setTimeout(() => {
-        copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy to Clipboard';
-      }, 2000);
-    });
-  }
-
-  // Modal open function for hardcoded projects
-  function openProjectModal(title, desc, img, demo) {
-    const modal = document.getElementById('project-modal');
-    const modalContent = document.getElementById('modal-content');
-    
-    let demoHtml = '';
-    if (demo && demo.startsWith('http')) {
-        demoHtml = `<iframe src="${demo}" class="w-full h-[300px] sm:h-[450px] rounded-md border border-gray-700" loading="lazy"></iframe>`;
+        document.getElementById('generated-code').value = code;
+        document.getElementById('generated-output-section').classList.remove('hidden');
+      });
     }
 
-    modalContent.innerHTML = `
+    const copyBtn = document.getElementById('copy-code-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const codeArea = document.getElementById('generated-code');
+        codeArea.select();
+        document.execCommand('copy');
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        setTimeout(() => {
+          copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy to Clipboard';
+        }, 2000);
+      });
+    }
+
+    // Modal open function for hardcoded projects
+    function openProjectModal(title, desc, img, demo) {
+      const modal = document.getElementById('project-modal');
+      const modalContent = document.getElementById('modal-content');
+
+      let demoHtml = '';
+      if (demo && demo.startsWith('http')) {
+        demoHtml = `<iframe src="${demo}" class="w-full h-[300px] sm:h-[450px] rounded-md border border-gray-700" loading="lazy"></iframe>`;
+      }
+
+      modalContent.innerHTML = `
         <h3 class="text-2xl sm:text-3xl font-bold text-indigo-500 mb-4">${title}</h3>
         <p class="mb-6 text-gray-400">${desc}</p>
         <div class="mb-6"><img src="${img}" alt="${title}" class="rounded-md w-full object-cover" /></div>
         <div>${demoHtml}</div>
     `;
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
 
-  // Modal open function for certificates
-  function openCertModal(pdfPath, title) {
-    const modal = document.getElementById('project-modal');
-    const modalContent = document.getElementById('modal-content');
-    
-    modalContent.innerHTML = `
+    // Modal open function for certificates
+    function openCertModal(pdfPath, title) {
+      const modal = document.getElementById('project-modal');
+      const modalContent = document.getElementById('modal-content');
+
+      modalContent.innerHTML = `
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
             <h3 class="text-2xl sm:text-3xl font-bold text-cyan-400">${title} Certificate</h3>
             <a href="${pdfPath}" download class="px-5 py-2.5 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm font-semibold transition flex items-center gap-2 border border-gray-600 shadow-lg">
@@ -1053,192 +1363,192 @@
             </div>
         </div>
     `;
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
-
-  // --- Portfolio Filtering Logic ---
-  const filterBtns = document.querySelectorAll('.filter-btn');
-
-  function applyFilter(filterValue) {
-    const uiuxSection = document.getElementById('uiux-section');
-    const aiSection = document.getElementById('ai-section');
-    if (!uiuxSection || !aiSection) return;
-    if (filterValue === 'all') {
-      uiuxSection.style.display = '';
-      aiSection.style.display = '';
-    } else if (filterValue === 'ui-ux') {
-      uiuxSection.style.display = '';
-      aiSection.style.display = 'none';
-    } else if (filterValue === 'ai') {
-      uiuxSection.style.display = 'none';
-      aiSection.style.display = '';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
     }
-  }
 
-  if (filterBtns.length > 0) {
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => {
-          b.classList.remove('bg-cyan-600', 'text-white', 'shadow-[0_0_15px_rgba(34,211,238,0.4)]');
-          b.classList.add('bg-gray-800', 'text-gray-300');
+    // --- Portfolio Filtering Logic ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    function applyFilter(filterValue) {
+      const uiuxSection = document.getElementById('uiux-section');
+      const aiSection = document.getElementById('ai-section');
+      if (!uiuxSection || !aiSection) return;
+      if (filterValue === 'all') {
+        uiuxSection.style.display = '';
+        aiSection.style.display = '';
+      } else if (filterValue === 'ui-ux') {
+        uiuxSection.style.display = '';
+        aiSection.style.display = 'none';
+      } else if (filterValue === 'ai') {
+        uiuxSection.style.display = 'none';
+        aiSection.style.display = '';
+      }
+    }
+
+    if (filterBtns.length > 0) {
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-cyan-600', 'text-white', 'shadow-[0_0_15px_rgba(34,211,238,0.4)]');
+            b.classList.add('bg-gray-800', 'text-gray-300');
+          });
+          btn.classList.remove('bg-gray-800', 'text-gray-300');
+          btn.classList.add('bg-cyan-600', 'text-white', 'shadow-[0_0_15px_rgba(34,211,238,0.4)]');
+          applyFilter(btn.getAttribute('data-filter'));
         });
-        btn.classList.remove('bg-gray-800', 'text-gray-300');
-        btn.classList.add('bg-cyan-600', 'text-white', 'shadow-[0_0_15px_rgba(34,211,238,0.4)]');
-        applyFilter(btn.getAttribute('data-filter'));
-      });
-    });
-  }
-
-  // --- UI/UX Slides Logic ---
-  (function() {
-    const track = document.getElementById('uiux-track');
-    const prevBtn = document.getElementById('uiux-prev');
-    const nextBtn = document.getElementById('uiux-next');
-    const dotsContainer = document.getElementById('uiux-dots');
-    const countEl = document.getElementById('uiux-count');
-    if (!track) return;
-
-    const slides = track.querySelectorAll('.uiux-slide');
-    const placeholder = document.getElementById('uiux-empty-placeholder');
-
-    if (slides.length === 0) {
-      if (placeholder) placeholder.style.display = 'flex';
-      if (countEl) countEl.textContent = '0 Projects';
-      if (prevBtn) prevBtn.style.opacity = '0.3';
-      if (nextBtn) nextBtn.style.opacity = '0.3';
-      return;
-    }
-    if (placeholder) placeholder.style.display = 'none';
-    if (countEl) countEl.textContent = slides.length + ' Project' + (slides.length > 1 ? 's' : '');
-
-    // Build dots
-    slides.forEach((_, i) => {
-      const dot = document.createElement('button');
-      dot.className = 'w-2 h-2 rounded-full transition-all duration-300 ' + (i === 0 ? 'bg-cyan-400 w-5' : 'bg-gray-600');
-      dot.addEventListener('click', () => scrollToSlide(i));
-      dotsContainer.appendChild(dot);
-    });
-
-    function scrollToSlide(index) {
-      const slideWidth = slides[0].offsetWidth + 24;
-      track.scrollTo({ left: slideWidth * index, behavior: 'smooth' });
-    }
-
-    function updateDots() {
-      const slideWidth = slides[0].offsetWidth + 24;
-      const active = Math.round(track.scrollLeft / slideWidth);
-      dotsContainer.querySelectorAll('button').forEach((d, i) => {
-        d.className = 'rounded-full transition-all duration-300 ' + (i === active ? 'bg-cyan-400 w-5 h-2' : 'w-2 h-2 bg-gray-600');
       });
     }
 
-    track.addEventListener('scroll', updateDots, { passive: true });
-    nextBtn && nextBtn.addEventListener('click', () => { track.scrollBy({ left: slides[0].offsetWidth + 24, behavior: 'smooth' }); });
-    prevBtn && prevBtn.addEventListener('click', () => { track.scrollBy({ left: -(slides[0].offsetWidth + 24), behavior: 'smooth' }); });
-  })();
+    // --- UI/UX Slides Logic ---
+    (function () {
+      const track = document.getElementById('uiux-track');
+      const prevBtn = document.getElementById('uiux-prev');
+      const nextBtn = document.getElementById('uiux-next');
+      const dotsContainer = document.getElementById('uiux-dots');
+      const countEl = document.getElementById('uiux-count');
+      if (!track) return;
 
-  // --- Skills Scroll & Stagger Animation ---
-  const skillItems = document.querySelectorAll('.skill-item');
-  if (skillItems.length > 0) {
-    const skillObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
+      const slides = track.querySelectorAll('.uiux-slide');
+      const placeholder = document.getElementById('uiux-empty-placeholder');
+
+      if (slides.length === 0) {
+        if (placeholder) placeholder.style.display = 'flex';
+        if (countEl) countEl.textContent = '0 Projects';
+        if (prevBtn) prevBtn.style.opacity = '0.3';
+        if (nextBtn) nextBtn.style.opacity = '0.3';
+        return;
+      }
+      if (placeholder) placeholder.style.display = 'none';
+      if (countEl) countEl.textContent = slides.length + ' Project' + (slides.length > 1 ? 's' : '');
+
+      // Build dots
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'w-2 h-2 rounded-full transition-all duration-300 ' + (i === 0 ? 'bg-cyan-400 w-5' : 'bg-gray-600');
+        dot.addEventListener('click', () => scrollToSlide(i));
+        dotsContainer.appendChild(dot);
       });
-    }, { threshold: 0.1 });
 
-    skillItems.forEach((item, index) => {
-      item.style.transitionDelay = `${index * 100}ms`;
-      skillObserver.observe(item);
-    });
-  }
+      function scrollToSlide(index) {
+        const slideWidth = slides[0].offsetWidth + 24;
+        track.scrollTo({ left: slideWidth * index, behavior: 'smooth' });
+      }
 
-  // --- Global Scroll Reveal Logic ---
-  const revealElements = document.querySelectorAll('.reveal');
-  if (revealElements.length > 0) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
+      function updateDots() {
+        const slideWidth = slides[0].offsetWidth + 24;
+        const active = Math.round(track.scrollLeft / slideWidth);
+        dotsContainer.querySelectorAll('button').forEach((d, i) => {
+          d.className = 'rounded-full transition-all duration-300 ' + (i === active ? 'bg-cyan-400 w-5 h-2' : 'w-2 h-2 bg-gray-600');
+        });
+      }
+
+      track.addEventListener('scroll', updateDots, { passive: true });
+      nextBtn && nextBtn.addEventListener('click', () => { track.scrollBy({ left: slides[0].offsetWidth + 24, behavior: 'smooth' }); });
+      prevBtn && prevBtn.addEventListener('click', () => { track.scrollBy({ left: -(slides[0].offsetWidth + 24), behavior: 'smooth' }); });
+    })();
+
+    // --- Skills Scroll & Stagger Animation ---
+    const skillItems = document.querySelectorAll('.skill-item');
+    if (skillItems.length > 0) {
+      const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      skillItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 100}ms`;
+        skillObserver.observe(item);
       });
-    }, { threshold: 0.15 });
-    revealElements.forEach(el => revealObserver.observe(el));
-  }
-
-  // --- Typing Text Effect Animation ---
-  const phrases = [
-    "AI Solutions Builder",
-    "Frontend Web Developer",
-  ];
-  let phraseIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const typingTextElement = document.getElementById("typing-text");
-
-  function typeEffect() {
-    const currentPhrase = phrases[phraseIndex];
-    
-    if (isDeleting) {
-      typingTextElement.textContent = currentPhrase.substring(0, charIndex - 1);
-      charIndex--;
-    } else {
-      typingTextElement.textContent = currentPhrase.substring(0, charIndex + 1);
-      charIndex++;
     }
 
-    let typingSpeed = isDeleting ? 50 : 100;
-
-    if (!isDeleting && charIndex === currentPhrase.length) {
-      typingSpeed = 2000; // Pause at end of phrase
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-      typingSpeed = 500; // Pause before next phrase
+    // --- Global Scroll Reveal Logic ---
+    const revealElements = document.querySelectorAll('.reveal');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.15 });
+      revealElements.forEach(el => revealObserver.observe(el));
     }
 
-    setTimeout(typeEffect, typingSpeed);
-  }
-  
-  // Start typing effect on load
-  if (typingTextElement) {
-    setTimeout(typeEffect, 1000);
-  }
+    // --- Typing Text Effect Animation ---
+    const phrases = [
+      "AI Solutions Builder",
+      "Frontend Web Developer",
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingTextElement = document.getElementById("typing-text");
 
-  // --- Dynamic Certificate Generator ---
-  // Aap yahan apni nayi details add kar sakte hain:
-  const certificateData = [
-    { pdf: 'images/certificate1.pdf', type: 'Achievement', title: 'View', icon: 'fa-medal', theme: 'cyan' },
-    { pdf: 'images/certificate2.pdf', type: 'Professional Skill', title: 'View', icon: 'fa-certificate', theme: 'indigo' },
-    { pdf: 'images/certificate3.pdf', type: 'Certification', title: 'View', icon: 'fa-trophy', theme: 'purple' },
-    { pdf: 'images/certificate4.pdf', type: 'Specialization', title: 'View', icon: 'fa-star', theme: 'blue' },
-    { pdf: 'images/certificate5.pdf', type: 'Recognition', title: 'View', icon: 'fa-graduation-cap', theme: 'pink' },
-    { pdf: 'images/certificate6.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
-    { pdf: 'images/certificate7.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
-    { pdf: 'images/certificate8.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
-    { pdf: 'images/certificate9.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
-    // Example of a new certificate:
-    // ,{ pdf: 'images/certificate7.pdf', type: 'Excellence', title: 'View', icon: 'fa-award', theme: 'cyan' }
-  ];
+    function typeEffect() {
+      const currentPhrase = phrases[phraseIndex];
 
-  const getThemeClasses = (theme) => {
-     const themes = {
-       cyan: { border: 'group-hover:border-cyan-500/50', gradient: 'from-cyan-500/10 to-transparent', iconBg: 'bg-cyan-500/10', iconColor: 'text-cyan-400' },
-       indigo: { border: 'group-hover:border-indigo-500/50', gradient: 'from-indigo-500/10 to-transparent', iconBg: 'bg-indigo-500/10', iconColor: 'text-indigo-400' },
-       purple: { border: 'group-hover:border-purple-500/50', gradient: 'from-purple-500/10 to-transparent', iconBg: 'bg-purple-500/10', iconColor: 'text-purple-400' },
-       blue: { border: 'group-hover:border-blue-500/50', gradient: 'from-blue-500/10 to-transparent', iconBg: 'bg-blue-500/10', iconColor: 'text-blue-400' },
-       pink: { border: 'group-hover:border-pink-500/50', gradient: 'from-pink-500/10 to-transparent', iconBg: 'bg-pink-500/10', iconColor: 'text-pink-400' },
-       emerald: { border: 'group-hover:border-emerald-500/50', gradient: 'from-emerald-500/10 to-transparent', iconBg: 'bg-emerald-500/10', iconColor: 'text-emerald-400' }
-     };
-     return themes[theme] || themes['cyan'];
-  };
+      if (isDeleting) {
+        typingTextElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingTextElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+      }
 
-  const createCertHTML = (cert) => {
-    const t = getThemeClasses(cert.theme);
-    return `
+      let typingSpeed = isDeleting ? 50 : 100;
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        typingSpeed = 2000; // Pause at end of phrase
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typingSpeed = 500; // Pause before next phrase
+      }
+
+      setTimeout(typeEffect, typingSpeed);
+    }
+
+    // Start typing effect on load
+    if (typingTextElement) {
+      setTimeout(typeEffect, 1000);
+    }
+
+    // --- Dynamic Certificate Generator ---
+    // Aap yahan apni nayi details add kar sakte hain:
+    const certificateData = [
+      { pdf: 'images/certificate1.pdf', type: 'Achievement', title: 'View', icon: 'fa-medal', theme: 'cyan' },
+      { pdf: 'images/certificate2.pdf', type: 'Professional Skill', title: 'View', icon: 'fa-certificate', theme: 'indigo' },
+      { pdf: 'images/certificate3.pdf', type: 'Certification', title: 'View', icon: 'fa-trophy', theme: 'purple' },
+      { pdf: 'images/certificate4.pdf', type: 'Specialization', title: 'View', icon: 'fa-star', theme: 'blue' },
+      { pdf: 'images/certificate5.pdf', type: 'Recognition', title: 'View', icon: 'fa-graduation-cap', theme: 'pink' },
+      { pdf: 'images/certificate6.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
+      { pdf: 'images/certificate7.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
+      { pdf: 'images/certificate8.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
+      { pdf: 'images/certificate9.pdf', type: 'Mastery', title: 'View', icon: 'fa-shield-alt', theme: 'emerald' },
+      // Example of a new certificate:
+      // ,{ pdf: 'images/certificate7.pdf', type: 'Excellence', title: 'View', icon: 'fa-award', theme: 'cyan' }
+    ];
+
+    const getThemeClasses = (theme) => {
+      const themes = {
+        cyan: { border: 'group-hover:border-cyan-500/50', gradient: 'from-cyan-500/10 to-transparent', iconBg: 'bg-cyan-500/10', iconColor: 'text-cyan-400' },
+        indigo: { border: 'group-hover:border-indigo-500/50', gradient: 'from-indigo-500/10 to-transparent', iconBg: 'bg-indigo-500/10', iconColor: 'text-indigo-400' },
+        purple: { border: 'group-hover:border-purple-500/50', gradient: 'from-purple-500/10 to-transparent', iconBg: 'bg-purple-500/10', iconColor: 'text-purple-400' },
+        blue: { border: 'group-hover:border-blue-500/50', gradient: 'from-blue-500/10 to-transparent', iconBg: 'bg-blue-500/10', iconColor: 'text-blue-400' },
+        pink: { border: 'group-hover:border-pink-500/50', gradient: 'from-pink-500/10 to-transparent', iconBg: 'bg-pink-500/10', iconColor: 'text-pink-400' },
+        emerald: { border: 'group-hover:border-emerald-500/50', gradient: 'from-emerald-500/10 to-transparent', iconBg: 'bg-emerald-500/10', iconColor: 'text-emerald-400' }
+      };
+      return themes[theme] || themes['cyan'];
+    };
+
+    const createCertHTML = (cert) => {
+      const t = getThemeClasses(cert.theme);
+      return `
         <div onclick="openCertModal('${cert.pdf}', '${cert.type}')" class="group relative w-[260px] h-[180px] sm:w-[340px] sm:h-[240px] flex flex-col rounded-2xl overflow-hidden bg-white border border-gray-700 ${t.border} shadow-lg transition-all duration-300 cursor-pointer flex-shrink-0 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)]">
           
           <!-- Full-Card Clean PDF Preview -->
@@ -1252,31 +1562,32 @@
              </div>
              
              <!-- The actual PDF -->
-             <iframe src="${cert.pdf}#toolbar=0&navpanes=0&scrollbar=0&view=FitH" class="absolute top-0 left-0 w-full h-[150%] sm:h-[130%] pointer-events-none transform origin-top transition-transform duration-500 group-hover:scale-105 z-10" scrolling="no" loading="lazy"></iframe>
+             <iframe src="${cert.pdf}#toolbar=0&navpanes=0&scrollbar=0&view=Fit" class="absolute top-0 left-0 w-full h-full pointer-events-none transform transition-transform duration-500 group-hover:scale-105 z-10" scrolling="no" loading="lazy"></iframe>
           </div>
         </div>`;
-  };
+    };
 
-  const renderCertificates = () => {
-     const trackLeft = document.getElementById('cert-track-left');
-     const trackRight = document.getElementById('cert-track-right');
-     if (!trackLeft || !trackRight) return;
+    const renderCertificates = () => {
+      const trackLeft = document.getElementById('cert-track-left');
+      const trackRight = document.getElementById('cert-track-right');
+      if (!trackLeft || !trackRight) return;
 
-     const half = Math.ceil(certificateData.length / 2);
-     const leftCerts = certificateData.slice(0, half);
-     const rightCerts = certificateData.slice(half);
+      const half = Math.ceil(certificateData.length / 2);
+      const leftCerts = certificateData.slice(0, half);
+      const rightCerts = certificateData.slice(half);
 
-     // Duplicate loop array items for infinite scroll effect
-     const generateTrackHTML = (certsArray) => {
-       const html = certsArray.map(createCertHTML).join('');
-       return html + html; 
-     };
+      // Duplicate loop array items for infinite scroll effect
+      const generateTrackHTML = (certsArray) => {
+        const html = certsArray.map(createCertHTML).join('');
+        return html + html;
+      };
 
-     trackLeft.innerHTML = generateTrackHTML(leftCerts);
-     trackRight.innerHTML = generateTrackHTML(rightCerts);
-  };
+      trackLeft.innerHTML = generateTrackHTML(leftCerts);
+      trackRight.innerHTML = generateTrackHTML(rightCerts);
+    };
 
-  renderCertificates();
+    renderCertificates();
   </script>
- </body>
+</body>
+
 </html>
